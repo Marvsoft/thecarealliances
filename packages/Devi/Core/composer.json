@@ -1,0 +1,26 @@
+{
+    "name": "krayin/laravel-core",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Suraj Kashyap",
+            "email": "surajkashyap9911@gmail.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Devi\\Core\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devi\\Core\\Providers\\CoreServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev"
+}

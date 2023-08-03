@@ -1,0 +1,27 @@
+{
+    "name": "krayin/laravel-ui",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jitendra Singh",
+            "email": "jitendra@Devi.com"
+        }
+    ],
+    "require": {
+        "krayin/laravel-core": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Devi\\UI\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devi\\UI\\Providers\\UIServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev"
+}
