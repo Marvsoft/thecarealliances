@@ -13,7 +13,7 @@ class Install extends Command
      *
      * @var string
      */
-    protected $signature = 'suraj-crm:install';
+    protected $signature = 'thecarealliances:install';
 
     /**
      * The console command description.
