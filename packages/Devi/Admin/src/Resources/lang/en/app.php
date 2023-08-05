@@ -41,6 +41,14 @@ return [
         'title'        => 'Services',
     ],
 
+    'who-am-i'  =>  [
+        'title'        =>  'Who Am I',
+        'create-btn'   =>  'Create',
+        'create-title' =>  'Create Who Am I Section',
+        'save-btn'     =>  'Save',
+        'back'         =>  'Back'
+    ],
+
     'posts' => [
         'title'               => 'Posts',
         'create-title'        => 'Create post',
@@ -148,6 +156,7 @@ return [
         'quote'                => 'Quote',
         'category'             => 'Category',
         'post'                 => 'Posts',
+        'who-am-i'             => 'Who Am I',
         'mail'                 => [
             'title'   => 'Mail',
             'compose' => 'Compose',

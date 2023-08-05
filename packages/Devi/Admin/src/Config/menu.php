@@ -33,6 +33,31 @@ return [
         'sort'       => 2,
         'icon-class' => 'posts-icon',
     ], [
+        'key'        => 'who-am-i',
+        'name'       => 'admin::app.layouts.who-am-i',
+        'route'      => 'admin.who-am-i.index',
+        'sort'       => 3,
+        'icon-class' => 'activities-icon',
+    ],
+    [
+        'key'        => 'who-am-i.posts',
+        'name'       => 'admin::app.layouts.who-am-i',
+        'route'      => 'admin.who-am-i.index',
+        'sort'       => 1,
+        'icon-class' => 'posts-icon',
+    ], [
+        'key'        => 'who-am-i.category',
+        'name'       => 'admin::app.layouts.category',
+        'route'      => 'admin.category.index',
+        'sort'       => 2,
+        'icon-class' => 'posts-icon',
+    ], [
+        'key'        => 'post.tags',
+        'name'       => 'admin::app.layouts.tags',
+        'route'      => 'admin.tags.index',
+        'sort'       => 2,
+        'icon-class' => 'posts-icon',
+    ], [
         'key'        => 'customer',
         'name'       => 'Customer List',
         'route'      => 'admin.customers.index',
