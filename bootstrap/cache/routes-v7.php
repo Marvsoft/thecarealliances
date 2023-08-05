@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Lgp4r49SwAofUpO2',
+            '_route' => 'generated::7ra6HgCwA4RQg2eb',
           ),
           1 => NULL,
           2 => 
@@ -202,7 +202,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::Bx5sltIF98Kak0q3',
+            '_route' => 'generated::CUyCOSscwVCzmTx1',
           ),
           1 => NULL,
           2 => 
@@ -744,18 +744,159 @@ app('router')->setCompiledRoutes(
           6 => NULL,
         ),
       ),
+      '/create-your-plan' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ui.front.create-plan',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/create-new-community' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ui.front.create-new-community',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/i-can-help' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ui.front.i-can-help',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/who-am-i' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ui.front.who-am-i',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/i-need-help' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ui.front.i-need-help',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/share-experiences' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ui.front.share-experiences',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/mentoring-portal' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'ui.front.mentoring-portal',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
       '/user/getzipcode' => 
       array (
         0 => 
         array (
           0 => 
           array (
-            '_route' => 'generated::VyZgboONI9nVi612',
+            '_route' => 'ui.front.zipcode',
           ),
           1 => NULL,
           2 => 
           array (
-            'POST' => 0,
+            'GET' => 0,
+            'HEAD' => 1,
           ),
           3 => NULL,
           4 => false,
@@ -769,7 +910,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::S5xaqglEYKfgpQx6',
+            '_route' => 'ui.front.category',
           ),
           1 => NULL,
           2 => 
@@ -788,7 +929,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::BZms9dUbYcoV5Mpa',
+            '_route' => 'ui.front.searchcateory',
           ),
           1 => NULL,
           2 => 
@@ -1910,7 +2051,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Lgp4r49SwAofUpO2' => 
+    'generated::7ra6HgCwA4RQg2eb' => 
     array (
       'methods' => 
       array (
@@ -1933,7 +2074,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::Lgp4r49SwAofUpO2',
+        'as' => 'generated::7ra6HgCwA4RQg2eb',
       ),
       'fallback' => false,
       'defaults' => 
@@ -1987,7 +2128,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::Bx5sltIF98Kak0q3' => 
+    'generated::CUyCOSscwVCzmTx1' => 
     array (
       'methods' => 
       array (
@@ -2009,7 +2150,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::Bx5sltIF98Kak0q3',
+        'as' => 'generated::CUyCOSscwVCzmTx1',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3554,18 +3695,29 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::VyZgboONI9nVi612' => 
+    'ui.front.create-plan' => 
     array (
       'methods' => 
       array (
-        0 => 'POST',
+        0 => 'GET',
+        1 => 'HEAD',
       ),
-      'uri' => 'user/getzipcode',
+      'uri' => 'create-your-plan',
       'action' => 
       array (
-        'uses' => 'App\\Http\\Controllers\\SearchApiController@getAllZipcode',
-        'controller' => 'App\\Http\\Controllers\\SearchApiController@getAllZipcode',
-        'as' => 'generated::VyZgboONI9nVi612',
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'user',
+        ),
+        'uses' => 'Devi\\UI\\Http\\Controllers\\FrontController@create_plan',
+        'controller' => 'Devi\\UI\\Http\\Controllers\\FrontController@create_plan',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'ui.front.create-plan',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3581,7 +3733,273 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::S5xaqglEYKfgpQx6' => 
+    'ui.front.create-new-community' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'create-new-community',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'user',
+        ),
+        'uses' => 'Devi\\UI\\Http\\Controllers\\FrontController@create_new_community',
+        'controller' => 'Devi\\UI\\Http\\Controllers\\FrontController@create_new_community',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'ui.front.create-new-community',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'ui.front.i-can-help' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'i-can-help',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'user',
+        ),
+        'uses' => 'Devi\\UI\\Http\\Controllers\\FrontController@i_can_help',
+        'controller' => 'Devi\\UI\\Http\\Controllers\\FrontController@i_can_help',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'ui.front.i-can-help',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'ui.front.who-am-i' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'who-am-i',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'user',
+        ),
+        'uses' => 'Devi\\UI\\Http\\Controllers\\FrontController@who_am_i',
+        'controller' => 'Devi\\UI\\Http\\Controllers\\FrontController@who_am_i',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'ui.front.who-am-i',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'ui.front.i-need-help' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'i-need-help',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'user',
+        ),
+        'uses' => 'Devi\\UI\\Http\\Controllers\\FrontController@i_need_help',
+        'controller' => 'Devi\\UI\\Http\\Controllers\\FrontController@i_need_help',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'ui.front.i-need-help',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'ui.front.share-experiences' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'share-experiences',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'user',
+        ),
+        'uses' => 'Devi\\UI\\Http\\Controllers\\FrontController@share_experiences',
+        'controller' => 'Devi\\UI\\Http\\Controllers\\FrontController@share_experiences',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'ui.front.share-experiences',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'ui.front.mentoring-portal' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'mentoring-portal',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'user',
+        ),
+        'uses' => 'Devi\\UI\\Http\\Controllers\\FrontController@mentoring_portal',
+        'controller' => 'Devi\\UI\\Http\\Controllers\\FrontController@mentoring_portal',
+        'namespace' => NULL,
+        'prefix' => '',
+        'where' => 
+        array (
+        ),
+        'as' => 'ui.front.mentoring-portal',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'ui.front.zipcode' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'user/getzipcode',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'user',
+        ),
+        'uses' => 'Devi\\UI\\Http\\Controllers\\SearchApiController@getAllZipcode',
+        'controller' => 'Devi\\UI\\Http\\Controllers\\SearchApiController@getAllZipcode',
+        'namespace' => NULL,
+        'prefix' => '/user',
+        'where' => 
+        array (
+        ),
+        'as' => 'ui.front.zipcode',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'ui.front.category' => 
     array (
       'methods' => 
       array (
@@ -3590,9 +4008,19 @@ app('router')->setCompiledRoutes(
       'uri' => 'user/getCategory',
       'action' => 
       array (
-        'uses' => 'App\\Http\\Controllers\\SearchApiController@getCategory',
-        'controller' => 'App\\Http\\Controllers\\SearchApiController@getCategory',
-        'as' => 'generated::S5xaqglEYKfgpQx6',
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'user',
+        ),
+        'uses' => 'Devi\\UI\\Http\\Controllers\\SearchApiController@getCategory',
+        'controller' => 'Devi\\UI\\Http\\Controllers\\SearchApiController@getCategory',
+        'namespace' => NULL,
+        'prefix' => '/user',
+        'where' => 
+        array (
+        ),
+        'as' => 'ui.front.category',
       ),
       'fallback' => false,
       'defaults' => 
@@ -3608,7 +4036,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::BZms9dUbYcoV5Mpa' => 
+    'ui.front.searchcateory' => 
     array (
       'methods' => 
       array (
@@ -3617,9 +4045,19 @@ app('router')->setCompiledRoutes(
       'uri' => 'user/searchCategory',
       'action' => 
       array (
-        'uses' => 'App\\Http\\Controllers\\SearchApiController@searchCategory',
-        'controller' => 'App\\Http\\Controllers\\SearchApiController@searchCategory',
-        'as' => 'generated::BZms9dUbYcoV5Mpa',
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'user',
+        ),
+        'uses' => 'Devi\\UI\\Http\\Controllers\\SearchApiController@searchCategory',
+        'controller' => 'Devi\\UI\\Http\\Controllers\\SearchApiController@searchCategory',
+        'namespace' => NULL,
+        'prefix' => '/user',
+        'where' => 
+        array (
+        ),
+        'as' => 'ui.front.searchcateory',
       ),
       'fallback' => false,
       'defaults' => 

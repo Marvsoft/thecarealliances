@@ -11,7 +11,7 @@
     'locale' => 'en',
     'fallback_locale' => 'en',
     'faker_locale' => 'en_US',
-    'key' => 'base64:1FGwbw7jITXPpztWJ+p/vDhvk7XvjXNBePZBxH31ncM=',
+    'key' => 'base64:KAKEYxs72iP0ZgoD3/8lKq/Z6ILFULy1Bu8ojuFikXA=',
     'version' => NULL,
     'cipher' => 'AES-256-CBC',
     'maintenance' => 
@@ -141,7 +141,7 @@
   'breadcrumbs' => 
   array (
     'view' => 'breadcrumbs::bootstrap5',
-    'files' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/routes/breadcrumbs.php',
+    'files' => 'C:\\xampp\\htdocs\\thecarealliances\\routes/breadcrumbs.php',
     'unnamed-route-exception' => true,
     'missing-route-bound-breadcrumb-exception' => true,
     'invalid-named-breadcrumb-exception' => true,
@@ -215,7 +215,7 @@
       'file' => 
       array (
         'driver' => 'file',
-        'path' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/storage/framework/cache/data',
+        'path' => 'C:\\xampp\\htdocs\\thecarealliances\\storage\\framework/cache/data',
       ),
       'memcached' => 
       array (
@@ -309,7 +309,7 @@
       array (
         'driver' => 'sqlite',
         'url' => NULL,
-        'database' => 'care_alliances',
+        'database' => 'thecarealliances',
         'prefix' => '',
         'foreign_key_constraints' => true,
       ),
@@ -319,7 +319,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'care_alliances',
+        'database' => 'thecarealliances',
         'username' => 'root',
         'password' => '',
         'unix_socket' => '',
@@ -339,7 +339,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'care_alliances',
+        'database' => 'thecarealliances',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -354,7 +354,7 @@
         'url' => NULL,
         'host' => '127.0.0.1',
         'port' => '3306',
-        'database' => 'care_alliances',
+        'database' => 'thecarealliances',
         'username' => 'root',
         'password' => '',
         'charset' => 'utf8',
@@ -403,7 +403,7 @@
     array (
       'enabled' => true,
       'driver' => 'file',
-      'path' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/storage/debugbar',
+      'path' => 'C:\\xampp\\htdocs\\thecarealliances\\storage\\debugbar',
       'connection' => NULL,
       'provider' => '',
       'hostname' => '127.0.0.1',
@@ -509,12 +509,12 @@
       'local' => 
       array (
         'driver' => 'local',
-        'root' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/storage/app',
+        'root' => 'C:\\xampp\\htdocs\\thecarealliances\\storage\\app',
       ),
       'public' => 
       array (
         'driver' => 'local',
-        'root' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/storage/app/public',
+        'root' => 'C:\\xampp\\htdocs\\thecarealliances\\storage\\app/public',
         'url' => 'http://localhost/storage',
         'visibility' => 'public',
       ),
@@ -531,7 +531,7 @@
     ),
     'links' => 
     array (
-      '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/public/storage' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/storage/app/public',
+      'C:\\xampp\\htdocs\\thecarealliances\\public\\storage' => 'C:\\xampp\\htdocs\\thecarealliances\\storage\\app/public',
     ),
   ),
   'flare' => 
@@ -621,7 +621,7 @@
     array (
     ),
     'enable_runnable_solutions' => NULL,
-    'remote_sites_path' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances',
+    'remote_sites_path' => 'C:\\xampp\\htdocs\\thecarealliances',
     'local_sites_path' => '',
     'housekeeping_endpoint_prefix' => '_ignition',
     'settings_file_path' => '',
@@ -631,6 +631,22 @@
       1 => 'Spatie\\LaravelIgnition\\Recorders\\JobRecorder\\JobRecorder',
       2 => 'Spatie\\LaravelIgnition\\Recorders\\LogRecorder\\LogRecorder',
       3 => 'Spatie\\LaravelIgnition\\Recorders\\QueryRecorder\\QueryRecorder',
+    ),
+    'open_ai_key' => NULL,
+    'with_stack_frame_arguments' => true,
+    'argument_reducers' => 
+    array (
+      0 => 'Spatie\\Backtrace\\Arguments\\Reducers\\BaseTypeArgumentReducer',
+      1 => 'Spatie\\Backtrace\\Arguments\\Reducers\\ArrayArgumentReducer',
+      2 => 'Spatie\\Backtrace\\Arguments\\Reducers\\StdClassArgumentReducer',
+      3 => 'Spatie\\Backtrace\\Arguments\\Reducers\\EnumArgumentReducer',
+      4 => 'Spatie\\Backtrace\\Arguments\\Reducers\\ClosureArgumentReducer',
+      5 => 'Spatie\\Backtrace\\Arguments\\Reducers\\DateTimeArgumentReducer',
+      6 => 'Spatie\\Backtrace\\Arguments\\Reducers\\DateTimeZoneArgumentReducer',
+      7 => 'Spatie\\Backtrace\\Arguments\\Reducers\\SymphonyRequestArgumentReducer',
+      8 => 'Spatie\\LaravelIgnition\\ArgumentReducers\\ModelArgumentReducer',
+      9 => 'Spatie\\LaravelIgnition\\ArgumentReducers\\CollectionArgumentReducer',
+      10 => 'Spatie\\Backtrace\\Arguments\\Reducers\\StringableArgumentReducer',
     ),
   ),
   'image' => 
@@ -700,14 +716,14 @@
       'single' => 
       array (
         'driver' => 'single',
-        'path' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/storage/logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\thecarealliances\\storage\\logs/laravel.log',
         'level' => 'debug',
         'replace_placeholders' => true,
       ),
       'daily' => 
       array (
         'driver' => 'daily',
-        'path' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/storage/logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\thecarealliances\\storage\\logs/laravel.log',
         'level' => 'debug',
         'days' => 14,
         'replace_placeholders' => true,
@@ -772,7 +788,7 @@
       ),
       'emergency' => 
       array (
-        'path' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/storage/logs/laravel.log',
+        'path' => 'C:\\xampp\\htdocs\\thecarealliances\\storage\\logs/laravel.log',
       ),
     ),
   ),
@@ -838,7 +854,7 @@
       'theme' => 'default',
       'paths' => 
       array (
-        0 => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/resources/views/vendor/mail',
+        0 => 'C:\\xampp\\htdocs\\thecarealliances\\resources\\views/vendor/mail',
       ),
     ),
   ),
@@ -957,9 +973,9 @@
     ),
     'generator' => 
     array (
-      'basePath' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/app',
+      'basePath' => 'C:\\xampp\\htdocs\\thecarealliances\\app',
       'rootNamespace' => 'App\\',
-      'stubsOverridePath' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/app',
+      'stubsOverridePath' => 'C:\\xampp\\htdocs\\thecarealliances\\app',
       'paths' => 
       array (
         'models' => 'Entities',
@@ -1022,7 +1038,7 @@
     'lifetime' => '120',
     'expire_on_close' => false,
     'encrypt' => false,
-    'files' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/storage/framework/sessions',
+    'files' => 'C:\\xampp\\htdocs\\thecarealliances\\storage\\framework/sessions',
     'connection' => NULL,
     'table' => 'sessions',
     'store' => NULL,
@@ -1055,9 +1071,9 @@
   array (
     'paths' => 
     array (
-      0 => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/resources/views',
+      0 => 'C:\\xampp\\htdocs\\thecarealliances\\resources\\views',
     ),
-    'compiled' => '/Applications/XAMPP/xamppfiles/htdocs/thecarealliances/storage/framework/views',
+    'compiled' => 'C:\\xampp\\htdocs\\thecarealliances\\storage\\framework\\views',
   ),
   'acl' => 
   array (
