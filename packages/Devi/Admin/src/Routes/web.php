@@ -52,6 +52,9 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
             Route::get('', 'Devi\Admin\Http\Controllers\Services\ServiceController@index')->name('admin.services.index');
         });
 
+        Route::get('who-am-i', [Devi\Admin\Http\Controllers\Who_Am_I\WhoAmIController::class, 'index'])->name('admin.who-am-i.index');
+        Route::get('who-am-i/create', [Devi\Admin\Http\Controllers\Who_Am_I\WhoAmIController::class, 'create'])->name('admin.who-am-i.create');
+
         // Admin Routes
         Route::group(['middleware' => ['user']], function () {
             Route::delete('logout', 'Devi\Admin\Http\Controllers\User\SessionController@destroy')->name('admin.session.destroy');
