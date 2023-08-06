@@ -21,6 +21,31 @@ Breadcrumbs::for('quotes', function (BreadcrumbTrail $trail) {
     $trail->push(trans('admin::app.layouts.quotes'), route('admin.quotes.index'));
 });
 
+Breadcrumbs::for('who-am-i', function (BreadcrumbTrail $trail) {
+    $trail->parent('dashboard');
+    $trail->push(trans('admin::app.who-am-i.title'), route('admin.who-am-i.main-category.index'));
+});
+
+Breadcrumbs::for('who-am-i.main-category', function (BreadcrumbTrail $trail) {
+    $trail->parent('who-am-i');
+    $trail->push(trans('admin::app.who-am-i.main-category'), route('admin.who-am-i.main-category.index'));
+});
+
+Breadcrumbs::for('who-am-i.main-category.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('who-am-i');
+    $trail->push(trans('admin::app.who-am-i.main-category-create'), route('admin.who-am-i.main-category.index'));
+});
+
+Breadcrumbs::for('who-am-i.sub-category', function (BreadcrumbTrail $trail) {
+    $trail->parent('who-am-i');
+    $trail->push(trans('admin::app.who-am-i.sub-category'), route('admin.who-am-i.main-category.index'));
+});
+
+Breadcrumbs::for('who-am-i.sub-category.create', function (BreadcrumbTrail $trail) {
+    $trail->parent('who-am-i');
+    $trail->push(trans('admin::app.who-am-i.sub-category-create'), route('admin.who-am-i.main-category.index'));
+});
+
 // Dashboard > Quotes > Add Quote
 Breadcrumbs::for('quotes.create', function (BreadcrumbTrail $trail) {
     $trail->parent('quotes');

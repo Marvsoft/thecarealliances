@@ -1,17 +1,17 @@
 @extends('admin::layouts.master')
 
 @section('page_title')
-    {{ __('admin::app.posts.create-title') }}
+    {{ __('admin::app.who-am-i.main-category') }}
 @stop
 
 @section('content-wrapper')
     <div class="content full-page adjacent-center">
         <div class="page-header">
 
-            {{ Breadcrumbs::render('posts.create') }}
+            {{ Breadcrumbs::render('who-am-i.main-category.create') }}
 
             <div class="page-title">
-                <h1>{{ __('admin::app.who-am-i.create-title') }}</h1>
+                <h1>{{ __('admin::app.who-am-i.main-category-create') }}</h1>
             </div>
         </div>
 
@@ -21,7 +21,11 @@
             @endforeach
        </ul>
 
-        <form method="post" action="{{ route('admin.posts.store') }}" @submit.prevent="onSubmit">
+        <form
+            method="post"
+            action="{{ route('admin.who-am-i.main-category.store') }}"
+            @submit.prevent="onSubmit"
+        >
             <div class="page-content">
                 <div class="form-container">
 
@@ -62,27 +66,6 @@
                                     </span>
                                 </div>
 
-
-                                <div class="form-group" :class="[errors.has('slug') ? 'has-error' : '']">
-                                    <label class="required">
-                                        {{ __('admin::app.posts.slug') }}
-                                    </label>
-
-                                    <input
-                                        type="text"
-                                        name="slug"
-                                        class="control"
-                                        value="{{ old('slug') }}"
-                                        placeholder="{{ __('admin::app.posts.slug') }}"
-                                        v-validate="'required'"
-                                        data-vv-as="{{ __('admin::app.posts.slug') }}"
-                                    />
-
-                                    <span class="control-error" v-if="errors.has('slug')">
-                                        @{{ errors.first('slug') }}
-                                    </span>
-                                </div>
-
                                 <div class="form-group">
                                     <label class="required">
                                         {{ __('admin::app.posts.status') }}
@@ -100,29 +83,6 @@
                                         />
                                         <span class="slider round"></span>
                                     </label>
-                                </div>
-
-                                <div class="form-group" :class="[errors.has('parent_id') ? 'has-error' : '']">
-                                    {{ __('admin::app.category.title') }}
-
-                                    <select
-                                        class="control"
-                                        id="parent_id"
-                                        name="parent_id"
-                                        v-validate="'numeric'"
-                                        data-vv-as="{{ __('admin::app.category.parent_id') }}"
-                                    >
-                                        <option value="0"></option>
-                                        {{-- @foreach ($categories as $key => $category)
-                                            <option value="{{ $key }}" {{ old('parent_id') == $category ? 'selected' : '' }}>
-                                                {{ $category }}
-                                            </option>
-                                        @endforeach --}}
-                                    </select>
-
-                                    <span class="control-error" v-if="errors.has('parent_id')">
-                                        @{{ errors.first('parent_id') }}
-                                    </span>
                                 </div>
 
                                 <div

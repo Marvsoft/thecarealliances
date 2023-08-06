@@ -42,11 +42,21 @@ return [
     ],
 
     'who-am-i'  =>  [
-        'title'        =>  'Who Am I',
-        'create-btn'   =>  'Create',
-        'create-title' =>  'Create Who Am I Section',
-        'save-btn'     =>  'Save',
-        'back'         =>  'Back'
+        'title'                => 'Who Am I',
+        'main-category'        => 'Main Category',
+        'sub-category'         => 'Sub Category',
+        'main-category-create' => 'Create Main Category',
+        'sub-category-create'  => 'Create Sub Category',
+        'create-btn'           => 'Create',
+        'save-btn'             => 'Save',
+        'back'                 => 'Back',
+        'save-btn'             => 'Save',
+        'back-btn'             => 'Back',
+        'general'              => 'General',
+        'header'               => 'Header',
+        'description'          => 'Description',
+        'status'               => 'Status',
+        'slug'                 => 'Slug',
     ],
 
     'posts' => [

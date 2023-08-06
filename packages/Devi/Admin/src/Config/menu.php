@@ -33,30 +33,29 @@ return [
         'sort'       => 2,
         'icon-class' => 'posts-icon',
     ], [
-        'key'        => 'who-am-i',
-        'name'       => 'admin::app.layouts.who-am-i',
-        'route'      => 'admin.who-am-i.index',
-        'sort'       => 3,
-        'icon-class' => 'activities-icon',
-    ],
-    [
-        'key'        => 'who-am-i.posts',
-        'name'       => 'admin::app.layouts.who-am-i',
-        'route'      => 'admin.who-am-i.index',
-        'sort'       => 1,
-        'icon-class' => 'posts-icon',
-    ], [
-        'key'        => 'who-am-i.category',
-        'name'       => 'admin::app.layouts.category',
-        'route'      => 'admin.category.index',
-        'sort'       => 2,
-        'icon-class' => 'posts-icon',
-    ], [
         'key'        => 'post.tags',
         'name'       => 'admin::app.layouts.tags',
         'route'      => 'admin.tags.index',
         'sort'       => 2,
         'icon-class' => 'posts-icon',
+    ], [
+        'key'        => 'who-am-i',
+        'name'       => 'admin::app.layouts.who-am-i',
+        'route'      => 'admin.who-am-i.main-category.index',
+        'sort'       => 3,
+        'icon-class' => 'activities-icon',
+    ], [
+        'key'        => 'who-am-i.posts',
+        'name'       => 'admin::app.who-am-i.main-category',
+        'route'      => 'admin.who-am-i.main-category.index',
+        'sort'       => 1,
+        'icon-class' => '',
+    ], [
+        'key'        => 'who-am-i.category',
+        'name'       => 'admin::app.who-am-i.sub-category',
+        'route'      => 'admin.who-am-i.sub-category.index',
+        'sort'       => 2,
+        'icon-class' => '',
     ], [
         'key'        => 'customer',
         'name'       => 'Customer List',
