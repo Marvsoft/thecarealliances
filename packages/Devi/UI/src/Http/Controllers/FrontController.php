@@ -3,6 +3,7 @@
 namespace Devi\UI\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Request;
 
 class FrontController extends Controller
 {
@@ -15,7 +16,7 @@ class FrontController extends Controller
     {
         $category = DB::table('charch_category')->get();
         $zipcode = DB::table('charch_address')->distinct()->pluck('zip_code');
-        return view('ui::front.index', compact('category', 'zipcode'));
+        return view('ui::layouts.index', compact('category', 'zipcode'));
     }
 
     public function create_plan()

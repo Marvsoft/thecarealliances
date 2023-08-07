@@ -2,8 +2,6 @@
 
 @section('content-wrapper')
 
-    @include('ui::layouts.search')
-
     <section class="resource-portal ">
         <div class="container">
             <h1>Our Resource Portal </h1>
