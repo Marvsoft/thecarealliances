@@ -38,7 +38,7 @@ return [
     |
     */
 
-    'editor' => env('IGNITION_EDITOR', 'phpstorm'),
+    'editor' => env('IGNITION_EDITOR', 'vscode'),
 
     /*
     |--------------------------------------------------------------------------
@@ -128,9 +128,7 @@ return [
     |
     */
 
-    'ignored_solution_providers' => [
-
-    ],
+    'ignored_solution_providers' => [],
 
     /*
     |--------------------------------------------------------------------------
