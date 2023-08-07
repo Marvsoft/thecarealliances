@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Devi\Admin\Http\Controllers\Who_Am_I\WhoAmIController;
 
 Route::group(['middleware' => ['web', 'admin_locale']], function () {
     Route::get('/', 'Devi\Admin\Http\Controllers\Controller@redirectToLogin')->name('krayin.home');
@@ -52,8 +53,15 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
             Route::get('', 'Devi\Admin\Http\Controllers\Services\ServiceController@index')->name('admin.services.index');
         });
 
-        Route::get('who-am-i', [Devi\Admin\Http\Controllers\Who_Am_I\WhoAmIController::class, 'index'])->name('admin.who-am-i.index');
-        Route::get('who-am-i/create', [Devi\Admin\Http\Controllers\Who_Am_I\WhoAmIController::class, 'create'])->name('admin.who-am-i.create');
+        Route::controller(WhoAmIController::class)->prefix('who-am-i')->group(function () {
+            Route::get('', 'index')->name('admin.who-am-i.main-category.index');
+            Route::get('create', 'create')->name('admin.who-am-i.main-category.create');
+            Route::post('create', 'store')->name('admin.who-am-i.main-category.store');
+            Route::get('sub-category/index', 'subCategory')->name('admin.who-am-i.sub-category.index');
+            Route::get('sub-category/create', 'createSubCategory')->name('admin.who-am-i.sub-category.create');
+            Route::post('sub-category/create', 'storeSubCategory')->name('admin.who-am-i.sub-category.store');
+        });
+
 
         // Admin Routes
         Route::group(['middleware' => ['user']], function () {
