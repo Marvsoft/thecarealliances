@@ -12,10 +12,18 @@ class FrontController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
+
+    public function searchData() {
         $category = DB::table('charch_category')->get();
         $zipcode = DB::table('charch_address')->distinct()->pluck('zip_code');
+
+        return [$category, $zipcode];
+    }
+
+    public function index()
+    {
+        $category = $this->searchData()[0];
+        $zipcode = $this->searchData()[1];
         return view('ui::layouts.index', compact('category', 'zipcode'));
     }
 
@@ -32,7 +40,10 @@ class FrontController extends Controller
 
     public function who_am_i()
     {
-        return view('ui::front.who-am-i');
+        $category = $this->searchData()[0];
+        $zipcode = $this->searchData()[1];
+        return view('ui::front.who-am-i', compact('category', 'zipcode'));
+        // return view('ui::front.who-am-i');
     }
 
     public function i_need_help()
