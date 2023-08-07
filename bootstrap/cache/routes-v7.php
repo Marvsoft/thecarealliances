@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::7ra6HgCwA4RQg2eb',
+            '_route' => 'generated::OL44njPgKGDMkRy1',
           ),
           1 => NULL,
           2 => 
@@ -202,7 +202,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::CUyCOSscwVCzmTx1',
+            '_route' => 'generated::nN9H3HmB7EicjOph',
           ),
           1 => NULL,
           2 => 
@@ -390,6 +390,46 @@ app('router')->setCompiledRoutes(
           0 => 
           array (
             '_route' => 'admin.services.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/who-am-i' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.who-am-i.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/who-am-i/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.who-am-i.create',
           ),
           1 => NULL,
           2 => 
@@ -2051,7 +2091,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::7ra6HgCwA4RQg2eb' => 
+    'generated::OL44njPgKGDMkRy1' => 
     array (
       'methods' => 
       array (
@@ -2068,13 +2108,13 @@ app('router')->setCompiledRoutes(
         ),
         'uses' => 'O:55:"Laravel\\SerializableClosure\\UnsignedSerializableClosure":1:{s:12:"serializable";O:46:"Laravel\\SerializableClosure\\Serializers\\Native":5:{s:3:"use";a:0:{}s:8:"function";s:77:"function (\\Illuminate\\Http\\Request $request) {
     return $request->user();
-}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006e70000000000000000";}}',
+}";s:5:"scope";s:37:"Illuminate\\Routing\\RouteFileRegistrar";s:4:"this";N;s:4:"self";s:32:"00000000000006fa0000000000000000";}}',
         'namespace' => NULL,
         'prefix' => 'api',
         'where' => 
         array (
         ),
-        'as' => 'generated::7ra6HgCwA4RQg2eb',
+        'as' => 'generated::OL44njPgKGDMkRy1',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2128,7 +2168,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::CUyCOSscwVCzmTx1' => 
+    'generated::nN9H3HmB7EicjOph' => 
     array (
       'methods' => 
       array (
@@ -2150,7 +2190,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::CUyCOSscwVCzmTx1',
+        'as' => 'generated::nN9H3HmB7EicjOph',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2565,6 +2605,82 @@ app('router')->setCompiledRoutes(
         array (
         ),
         'as' => 'admin.services.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.who-am-i.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/who-am-i',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'admin_locale',
+        ),
+        'uses' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@index',
+        'controller' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@index',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.who-am-i.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.who-am-i.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/who-am-i/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'admin_locale',
+        ),
+        'uses' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@create',
+        'controller' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@create',
+        'namespace' => NULL,
+        'prefix' => '/admin',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.who-am-i.create',
       ),
       'fallback' => false,
       'defaults' => 

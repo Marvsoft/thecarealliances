@@ -592,7 +592,7 @@
   ),
   'ignition' => 
   array (
-    'editor' => 'phpstorm',
+    'editor' => 'vscode',
     'theme' => 'auto',
     'enable_share_button' => true,
     'register_commands' => false,
@@ -1244,13 +1244,45 @@
       ),
       5 => 
       array (
+        'key' => 'post.tags',
+        'name' => 'admin::app.layouts.tags',
+        'route' => 'admin.tags.index',
+        'sort' => 2,
+        'icon-class' => 'posts-icon',
+      ),
+      6 => 
+      array (
+        'key' => 'who-am-i',
+        'name' => 'admin::app.layouts.who-am-i',
+        'route' => 'admin.who-am-i.main-category.index',
+        'sort' => 3,
+        'icon-class' => 'activities-icon',
+      ),
+      7 => 
+      array (
+        'key' => 'who-am-i.posts',
+        'name' => 'admin::app.who-am-i.main-category',
+        'route' => 'admin.who-am-i.main-category.index',
+        'sort' => 1,
+        'icon-class' => '',
+      ),
+      8 => 
+      array (
+        'key' => 'who-am-i.category',
+        'name' => 'admin::app.who-am-i.sub-category',
+        'route' => 'admin.who-am-i.sub-category.index',
+        'sort' => 2,
+        'icon-class' => '',
+      ),
+      9 => 
+      array (
         'key' => 'customer',
         'name' => 'Customer List',
         'route' => 'admin.customers.index',
         'sort' => 3,
         'icon-class' => 'avatar-icon',
       ),
-      6 => 
+      10 => 
       array (
         'key' => 'alliance',
         'name' => 'Alliance',
@@ -1258,35 +1290,35 @@
         'sort' => 4,
         'icon-class' => 'tools-icon',
       ),
-      7 => 
+      11 => 
       array (
         'key' => 'alliance.who-am-i',
         'name' => 'admin::app.alliance.title',
         'route' => 'admin.resources.index',
         'sort' => 1,
       ),
-      8 => 
+      12 => 
       array (
         'key' => 'alliance.resource',
         'name' => 'Resource',
         'route' => 'admin.resources.index',
         'sort' => 2,
       ),
-      9 => 
+      13 => 
       array (
         'key' => 'alliance.i-can-help',
         'name' => 'I Can Help',
         'route' => 'admin.resources.index',
         'sort' => 3,
       ),
-      10 => 
+      14 => 
       array (
         'key' => 'alliance.i-need-help',
         'name' => 'I Need Help',
         'route' => 'admin.resources.index',
         'sort' => 4,
       ),
-      11 => 
+      15 => 
       array (
         'key' => 'services',
         'name' => 'Services',
@@ -1294,7 +1326,7 @@
         'sort' => 5,
         'icon-class' => 'leads-icon',
       ),
-      12 => 
+      16 => 
       array (
         'key' => 'settings',
         'name' => 'admin::app.layouts.settings',
@@ -1302,7 +1334,7 @@
         'sort' => 6,
         'icon-class' => 'settings-icon',
       ),
-      13 => 
+      17 => 
       array (
         'key' => 'settings.user',
         'name' => 'admin::app.layouts.user',
@@ -1310,7 +1342,7 @@
         'info' => 'admin::app.layouts.user-info',
         'sort' => 1,
       ),
-      14 => 
+      18 => 
       array (
         'key' => 'settings.user.roles',
         'name' => 'admin::app.layouts.roles',
@@ -1319,7 +1351,7 @@
         'sort' => 2,
         'icon-class' => 'role-icon',
       ),
-      15 => 
+      19 => 
       array (
         'key' => 'settings.user.users',
         'name' => 'admin::app.layouts.users',

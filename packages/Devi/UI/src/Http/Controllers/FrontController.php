@@ -13,9 +13,8 @@ class FrontController extends Controller
      */
     public function index()
     {
-        $category = DB::table('charch_category')->get();
-        $zipcode = DB::table('charch_address')->distinct()->pluck('zip_code');
-        return view('ui::front.index', compact('category', 'zipcode'));
+        $category = DB::table('charch_address')->get();
+        return view('ui::front.index', compact('category'));
     }
 
     public function create_plan()
