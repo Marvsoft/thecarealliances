@@ -1,5 +1,9 @@
+@php
+    $category = DB::table('charch_category')->get();
+    $zipcode = DB::table('charch_address')->distinct()->pluck('zip_code');
+@endphp
+
 <div class="search-bar">
-    {{-- @dd($category) --}}
     <div class="container ">
         <form action="{{ route('ui.front.searchcateory') }}" id="search-form" method="POST">
             @csrf
