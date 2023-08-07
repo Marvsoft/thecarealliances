@@ -604,15 +604,15 @@
         }
 
         .search-bar {
-        position: absolute;
+        position: relative;
         background-color: var(--white);
-        left: 50%;
-        transform: translate(-50%, 0%);
-        top: 20%;
+        /* left: 50%; */
+        /* transform: translate(-50%, 0%); */
+        /* top: 20%; */
         width: -moz-fit-content;
         width: fit-content;
         padding: 10px 20px;
-        width: 80%;
+        /* width: 80%; */
         border-radius: 10px;
         z-index: 20;
         }
@@ -892,6 +892,8 @@
     <body style="scroll-behavior: smooth;">
         <div id="app">
             @include('ui::layouts.header')
+
+            @include('ui::layouts.search')
 
             @yield('content-wrapper')
 
