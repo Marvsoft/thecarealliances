@@ -16,12 +16,13 @@
                     <div class="col-md-3">
                         <a href="./who-am-i.html">
                             <figure class="img-card">
-                                <div class="image">
-                                    <img src="https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8fDA%3D&w=1000&q=80" alt="image" />
-                                </div>
-
                                 <figcaption style="color:black;">
-                                    <h4>{{ $item->name }}</h4>
+                                    {{-- <h4>{{ $item->name }}</h5>
+                                    <h5>{{ $item->address }}</h5>
+                                    <h5>{{ $item->city }}</h5>
+                                    <h5>{{ $item->state }}</h5>
+                                    <h5>{{ $item->zip_code }}</h5>
+                                    <h5>{{ $item->phone }}</h5> --}}
                                 </figcaption>
                             </figure>
                         </a>

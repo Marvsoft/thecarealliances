@@ -24,8 +24,8 @@
                             </option>
 
                             @foreach ($category as $item)
-                                <option value="{{ $item->name }}">
-                                    {{ $item->name }}
+                                <option value="{{ $item->id }}">
+                                    {{ $item->category_name }}
                                 </option>
                             @endforeach
                         @endif
@@ -35,10 +35,10 @@
                 <div class="search-item">
                     <label for="location">Select Location:</label>
                     <select name="location" id="location">
-                        @if (isset($category))
+                        @if (isset($zipcode))
                             <option value="">-- Choose option -- </option>
-                            @foreach ($category as $item)
-                                <option value="{{ $item->zip_code }}">{{ $item->zip_code }}</option>
+                            @foreach ($zipcode as $item)
+                                <option value="{{ $item }}">{{ $item }}</option>
                             @endforeach
                         @endif
                     </select>
