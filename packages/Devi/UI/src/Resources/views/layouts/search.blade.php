@@ -1,7 +1,7 @@
 <div class="search-bar">
     {{-- @dd($category) --}}
     <div class="container ">
-        <form action="{{ route('ui.front.searchcateory') }}" method="POST">
+        <form action="{{ route('ui.front.searchcateory') }}" id="search-form" method="POST">
             @csrf
             <div class="search-row">
                 <div class="search-item">
@@ -17,6 +17,7 @@
                     <select
                         name="category"
                         id="category"
+                        onchange="submitForm()"
                     >
                         @if (isset($category))
                             <option value="">
@@ -34,7 +35,7 @@
 
                 <div class="search-item">
                     <label for="location">Select Location:</label>
-                    <select name="location" id="location">
+                    <select name="location" id="location" onchange="submitForm()">
                         @if (isset($zipcode))
                             <option value="">-- Choose option -- </option>
                             @foreach ($zipcode as $item)
@@ -51,3 +52,13 @@
         </form>
     </div>
 </div>
+
+<script>
+    function submitForm() {
+        // Get the form element
+        var form = document.getElementById('search-form');
+
+        // Submit the form
+        form.submit();
+    }
+</script>
