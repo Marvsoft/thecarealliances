@@ -10,7 +10,7 @@
             <div class="search-row">
                 <div class="search-item">
                     <label for="sorting">Search By Anything:</label>
-                    <input type="text" name="search">
+                    <input type="text" name="search" placeholder="Search">
                 </div>
 
                 <div class="search-item">
