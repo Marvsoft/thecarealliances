@@ -31,22 +31,4 @@ class AllianceController extends Controller
     {
         return view('admin::alliance.create');
     }
-
-    /**
-     * Store Data
-     */
-    public function store()
-    {
-        dd(request()->all());
-        // $this->validate(request(), [
-        //     'header' => 'required',
-        //     'status' => 'required',
-        // ]);
-
-        // $post = $this->whoamiRepository->create(request()->only('header', 'description', 'status'));
-
-        // session()->flash('success', trans('admin::app.posts.create-success'));
-
-        // return redirect()->route('admin.alliance.index');
-    }
 }
