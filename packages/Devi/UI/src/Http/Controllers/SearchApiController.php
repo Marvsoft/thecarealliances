@@ -33,7 +33,7 @@ class SearchApiController extends Controller
 
         if (isset($category) && !isset($zipcode)) {
             $search =  DB::table('charch_address')
-                ->where('name', 'LIKE', '%' . $category . '%')
+                ->where('category_id', 'LIKE', '%' . $category . '%')
                 ->get();
 
             return view('ui::front.search', compact('search'));
