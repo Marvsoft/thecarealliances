@@ -2,8 +2,6 @@
 
 @section('content-wrapper')
 
-    @include('ui::layouts.search')
-
     <section class="hero">
         <div class="container">
             <div class="text">
