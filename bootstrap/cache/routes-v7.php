@@ -162,7 +162,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::OL44njPgKGDMkRy1',
+            '_route' => 'generated::R2hliPSI7a9UAf1n',
           ),
           1 => NULL,
           2 => 
@@ -202,7 +202,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'generated::nN9H3HmB7EicjOph',
+            '_route' => 'generated::THTAcYIRB9n1m50i',
           ),
           1 => NULL,
           2 => 
@@ -409,7 +409,7 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'admin.who-am-i.index',
+            '_route' => 'admin.who-am-i.main-category.index',
           ),
           1 => NULL,
           2 => 
@@ -429,13 +429,85 @@ app('router')->setCompiledRoutes(
         array (
           0 => 
           array (
-            '_route' => 'admin.who-am-i.create',
+            '_route' => 'admin.who-am-i.main-category.create',
           ),
           1 => NULL,
           2 => 
           array (
             'GET' => 0,
             'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.who-am-i.main-category.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/who-am-i/sub-category/index' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.who-am-i.sub-category.index',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+      ),
+      '/admin/who-am-i/sub-category/create' => 
+      array (
+        0 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.who-am-i.sub-category.create',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'GET' => 0,
+            'HEAD' => 1,
+          ),
+          3 => NULL,
+          4 => false,
+          5 => false,
+          6 => NULL,
+        ),
+        1 => 
+        array (
+          0 => 
+          array (
+            '_route' => 'admin.who-am-i.sub-category.store',
+          ),
+          1 => NULL,
+          2 => 
+          array (
+            'POST' => 0,
           ),
           3 => NULL,
           4 => false,
@@ -2091,7 +2163,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::OL44njPgKGDMkRy1' => 
+    'generated::R2hliPSI7a9UAf1n' => 
     array (
       'methods' => 
       array (
@@ -2114,7 +2186,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::OL44njPgKGDMkRy1',
+        'as' => 'generated::R2hliPSI7a9UAf1n',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2168,7 +2240,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'generated::nN9H3HmB7EicjOph' => 
+    'generated::THTAcYIRB9n1m50i' => 
     array (
       'methods' => 
       array (
@@ -2190,7 +2262,7 @@ app('router')->setCompiledRoutes(
         'where' => 
         array (
         ),
-        'as' => 'generated::nN9H3HmB7EicjOph',
+        'as' => 'generated::THTAcYIRB9n1m50i',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2620,7 +2692,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'admin.who-am-i.index' => 
+    'admin.who-am-i.main-category.index' => 
     array (
       'methods' => 
       array (
@@ -2638,11 +2710,11 @@ app('router')->setCompiledRoutes(
         'uses' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@index',
         'controller' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@index',
         'namespace' => NULL,
-        'prefix' => '/admin',
+        'prefix' => 'admin/who-am-i',
         'where' => 
         array (
         ),
-        'as' => 'admin.who-am-i.index',
+        'as' => 'admin.who-am-i.main-category.index',
       ),
       'fallback' => false,
       'defaults' => 
@@ -2658,7 +2730,7 @@ app('router')->setCompiledRoutes(
       'waitSeconds' => NULL,
       'withTrashed' => false,
     ),
-    'admin.who-am-i.create' => 
+    'admin.who-am-i.main-category.create' => 
     array (
       'methods' => 
       array (
@@ -2676,11 +2748,161 @@ app('router')->setCompiledRoutes(
         'uses' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@create',
         'controller' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@create',
         'namespace' => NULL,
-        'prefix' => '/admin',
+        'prefix' => 'admin/who-am-i',
         'where' => 
         array (
         ),
-        'as' => 'admin.who-am-i.create',
+        'as' => 'admin.who-am-i.main-category.create',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.who-am-i.main-category.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'admin/who-am-i/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'admin_locale',
+        ),
+        'uses' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@store',
+        'controller' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@store',
+        'namespace' => NULL,
+        'prefix' => 'admin/who-am-i',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.who-am-i.main-category.store',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.who-am-i.sub-category.index' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/who-am-i/sub-category/index',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'admin_locale',
+        ),
+        'uses' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@subCategory',
+        'controller' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@subCategory',
+        'namespace' => NULL,
+        'prefix' => 'admin/who-am-i',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.who-am-i.sub-category.index',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.who-am-i.sub-category.create' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'GET',
+        1 => 'HEAD',
+      ),
+      'uri' => 'admin/who-am-i/sub-category/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'admin_locale',
+        ),
+        'uses' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@createSubCategory',
+        'controller' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@createSubCategory',
+        'namespace' => NULL,
+        'prefix' => 'admin/who-am-i',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.who-am-i.sub-category.create',
+      ),
+      'fallback' => false,
+      'defaults' => 
+      array (
+      ),
+      'wheres' => 
+      array (
+      ),
+      'bindingFields' => 
+      array (
+      ),
+      'lockSeconds' => NULL,
+      'waitSeconds' => NULL,
+      'withTrashed' => false,
+    ),
+    'admin.who-am-i.sub-category.store' => 
+    array (
+      'methods' => 
+      array (
+        0 => 'POST',
+      ),
+      'uri' => 'admin/who-am-i/sub-category/create',
+      'action' => 
+      array (
+        'middleware' => 
+        array (
+          0 => 'web',
+          1 => 'admin_locale',
+        ),
+        'uses' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@storeSubCategory',
+        'controller' => 'Devi\\Admin\\Http\\Controllers\\Who_Am_I\\WhoAmIController@storeSubCategory',
+        'namespace' => NULL,
+        'prefix' => 'admin/who-am-i',
+        'where' => 
+        array (
+        ),
+        'as' => 'admin.who-am-i.sub-category.store',
       ),
       'fallback' => false,
       'defaults' => 
