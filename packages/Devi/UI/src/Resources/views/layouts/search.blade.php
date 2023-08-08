@@ -38,7 +38,7 @@
                 </div>
 
                 <div class="search-item">
-                    <label for="location">Select Location:</label>
+                    <label for="location">Select Zipcode:</label>
                     <select name="location" id="location" onchange="submitForm()">
                         @if (isset($zipcode))
                             <option value="">-- Choose option -- </option>

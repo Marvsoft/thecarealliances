@@ -5,7 +5,7 @@ use Devi\UI\Http\Controllers\ExportController;
 use Devi\UI\Http\Controllers\FrontController;
 use Devi\UI\Http\Controllers\SearchApiController;
 
-Route::group(['middleware' => ['web', 'user']], function () {
+// Route::group(['middleware' => ['web', 'user']], function () {
 
     /**
      * DataGrid export.
@@ -29,4 +29,4 @@ Route::group(['middleware' => ['web', 'user']], function () {
         Route::post('getCategory', 'getCategory')->name('ui.front.category');
         Route::post('searchCategory', 'searchCategory')->name('ui.front.searchcateory');
     });
-});
+// });
