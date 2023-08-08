@@ -25,7 +25,7 @@
             </div>
             <div class="row gy-3">
                 <div class="col-md-3">
-                    <a href="./who-am-i.html">
+                    <a href="{{ route('ui.front.who-am-i') }}">
                         <figure class="img-card">
                             <div class="image"><img src="https://www.thecarealliances.com/wp-content/uploads/2023/07/Untitled-1.jpg" alt="image" /></div>
                             <figcaption style="background:rgb(0 30 108 / 80%);">
@@ -36,7 +36,7 @@
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="i-can-help.html">
+                    <a href="{{ route('ui.front.i-can-help') }}">
                         <figure class="img-card">
                             <div class="image"><img src="https://www.thecarealliances.com/wp-content/uploads/2023/07/Untitled-4.jpg" alt="image" /></div>
                             <figcaption style="background:rgb(0 30 108 / 80%);">
@@ -46,7 +46,7 @@
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="i-need-help.html">
+                    <a href="{{ route('ui.front.i-need-help') }}">
                         <figure class="img-card">
                             <div class="image"><img src="https://www.thecarealliances.com/wp-content/uploads/2023/07/Untitled-5.jpg" alt="image" /></div>
                             <figcaption style="background:rgb(0 30 108 / 80%);">
@@ -56,7 +56,7 @@
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="share-experiences.html">
+                    <a href="{{ route('ui.front.share-experiences') }}">
                         <figure class="img-card">
                             <div class="image"><img src="https://www.thecarealliances.com/wp-content/uploads/2023/07/Untitled-6.jpg" alt="image" /></div>
                             <figcaption style="background:rgb(0 30 108 / 80%);">
@@ -66,9 +66,9 @@
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="create-new-community.html">
+                    <a href="{{ route('ui.front.create-new-community') }}">
                         <figure class="img-card">
-                            <div class="image"><img src="https://www.thecarealliances.com/wp-content/uploads/2023/07/Untitled-6.jpg" alt="image" /></div>
+                            <div class="image"><img src="https://www.thecarealliances.com/wp-content/uploads/2023/07/Untitled-2.jpg" alt="image" /></div>
                             <figcaption style="background:rgb(0 30 108 / 80%);">
                                 <h4>Find Your Community </h4>
                             </figcaption>
@@ -76,7 +76,7 @@
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="create-your-plan.html">
+                    <a href="{{ route('ui.front.create-your-plan') }}">
                         <figure class="img-card">
                             <div class="image"><img src="https://www.thecarealliances.com/wp-content/uploads/2023/07/Untitled-7.jpg" alt="image" /></div>
                             <figcaption style="background:rgb(0 30 108 / 80%);">
@@ -86,7 +86,7 @@
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="edutainment-culture-and-lifestyle.html">
+                    <a href="{{ route('ui.front.edutainment-culture-and-lifestyle') }}">
                         <figure class="img-card">
                             <div class="image"><img src="https://www.thecarealliances.com/wp-content/uploads/2023/07/Untitled-3.jpg" alt="image" /></div>
                             <figcaption style="background:rgb(0 30 108 / 80%);">
@@ -96,11 +96,11 @@
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a href="mentoring-portals.html">
+                    <a href="{{ route('ui.front.mentoring-portal')}}">
                         <figure class="img-card">
                             <div class="image"><img src="https://www.thecarealliances.com/wp-content/uploads/2023/07/Untitled-8.jpg" alt="image" /></div>
                             <figcaption style="background:rgb(0 30 108 / 80%);">
-                                <h4>The Monitoring Portals </h4>
+                                <h4>The Mentoring Portals </h4>
                             </figcaption>
                         </figure>
                     </a>

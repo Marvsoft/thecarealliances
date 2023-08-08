@@ -13,14 +13,6 @@ class FrontController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    /* public function searchData()
-    {
-        $category = DB::table('charch_category')->get();
-        $zipcode = DB::table('charch_address')->distinct()->pluck('zip_code');
-
-        return [$category, $zipcode];
-    } */
-
     public function index()
     {
         return view('ui::front.index');
@@ -39,9 +31,6 @@ class FrontController extends Controller
 
     public function who_am_i()
     {
-        // $category = $this->searchData()[0];
-        // $zipcode = $this->searchData()[1];
-        // return view('ui::front.who-am-i', compact('category', 'zipcode'));
         return view('ui::front.who-am-i');
     }
 
@@ -62,5 +51,10 @@ class FrontController extends Controller
     public function create_new_community()
     {
         return view('ui::front.create-new-community');
+    }
+
+    public function edutainment_culture_and_lifestyle()
+    {
+        return view('ui::front.edutainment-culture-and-lifestyle');
     }
 }
