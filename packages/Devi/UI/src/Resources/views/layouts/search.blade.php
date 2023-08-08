@@ -1,12 +1,16 @@
+@php
+    $category = DB::table('charch_category')->get();
+    $zipcode = DB::table('charch_address')->distinct()->pluck('zip_code');
+@endphp
+
 <div class="search-bar">
-    {{-- @dd($category) --}}
     <div class="container ">
         <form action="{{ route('ui.front.searchcateory') }}" id="search-form" method="POST">
             @csrf
             <div class="search-row">
                 <div class="search-item">
                     <label for="sorting">Search By Anything:</label>
-                    <input type="text" name="search">
+                    <input type="text" name="search" placeholder="Search">
                 </div>
 
                 <div class="search-item">
@@ -34,7 +38,7 @@
                 </div>
 
                 <div class="search-item">
-                    <label for="location">Select Location:</label>
+                    <label for="location">Select Zipcode:</label>
                     <select name="location" id="location" onchange="submitForm()">
                         @if (isset($zipcode))
                             <option value="">-- Choose option -- </option>

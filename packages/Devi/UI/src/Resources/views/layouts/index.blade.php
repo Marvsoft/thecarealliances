@@ -608,13 +608,15 @@ a {
   background-color: var(--white);
   left: 50%;
   transform: translate(-50%, 0%);
-  top: 20%;
+  top: 160px;
   width: -moz-fit-content;
   width: fit-content;
   padding: 10px 20px;
   width: 80%;
   border-radius: 10px;
   z-index: 20;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+
 }
 .search-bar .container {
   padding: 5px 0px;
@@ -638,6 +640,7 @@ a {
   margin-bottom: 5px;
 }
 .search-bar select,
+.search-bar input,
 .search-bar button {
   width: 100%;
   padding: 10px;
@@ -645,8 +648,8 @@ a {
 }
 
 .hero {
-  background: url("../imgs/hero-bg.jpg");
-  padding: 200px 0px 170px 0px;
+  background: url("https://i.ibb.co/6vmssmR/hero-bg.jpg");
+  padding: 70px 0px;
   background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
