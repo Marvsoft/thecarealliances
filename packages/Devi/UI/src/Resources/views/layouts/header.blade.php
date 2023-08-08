@@ -52,8 +52,8 @@
                     <a href="alliances.html"><span>Alliances</span><i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="{{ route('ui.front.create-new-community') }}">Community </a></li>
-                        <li><a href="{{ route('ui.front.create-plan') }}">Create Your plan</a></li>
-                        <li><a href="{{ route('ui.front.create-new-community') }}">Edutainment, Culture and Lifestyle</a>
+                        <li><a href="{{ route('ui.front.create-your-plan') }}">Create Your plan</a></li>
+                        <li><a href="{{ route('ui.front.edutainment-culture-and-lifestyle') }}">Edutainment, Culture and Lifestyle</a>
                         </li>
                         <li><a href="{{ route('ui.front.i-need-help') }}">I Need Help</a></li>
                         <li><a href="{{ route('ui.front.i-can-help') }}">I can help</a></li>
