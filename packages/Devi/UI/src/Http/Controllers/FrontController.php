@@ -248,7 +248,6 @@ class FrontController extends Controller
         }
     }
 
-
     public function login()
     {
         return view('ui::front.login');
