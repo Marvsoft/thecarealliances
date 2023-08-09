@@ -17,25 +17,35 @@
                     Create a new community
                 </h3>
             </div>
-            <form class="form-custom helper-form ">
-
+            
+            <form action="{{ route('community-store') }}" class="form-custom helper-form " method="post">
+                @csrf
                 <div class="row">
                     <div class="form-group ">
                         <label for="name">Community Name* </label>
-                        <input type="text" class="form-control" id="cname" placeholder="Community Name">
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Community Name">
+                        @error('name')
+                            <div class="invalid-feedback" style="display:block;">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="form-group ">
                         <label for="name">Interest or Category </label>
-                        <input type="text" class="form-control" id="interestCategory"
+                        <input type="text" class="form-control" name="interest_category" id="interestCategory"
                             placeholder="Interest or Category">
+                            @error('interest_category')
+                                <div class="invalid-feedback" style="display:block;">{{ $message }}</div>
+                            @enderror
                     </div>
 
 
                     <div class="form-group">
                         <label for="message">Description </label>
-                        <textarea class="form-control" id="message" rows="7"
+                        <textarea class="form-control" name="description" id="description" rows="7"
                             placeholder="Enter your message"></textarea>
+                            @error('description')
+                                <div class="invalid-feedback" style="display:block;">{{ $message }}</div>
+                            @enderror
                     </div>
 
                     <div class="text-center mt-4">
