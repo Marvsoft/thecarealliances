@@ -17,44 +17,25 @@
                     Create a new community
                 </h3>
             </div>
-            <form
-                action="{{ route('ui.front.create-new-community-store') }}"
-                class="form-custom helper-form "
-                method="POST"
-            >
-                @csrf
+            <form class="form-custom helper-form ">
+
                 <div class="row">
                     <div class="form-group ">
                         <label for="name">Community Name* </label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            name="name"
-                            id="name"
-                            placeholder="Community Name"
-                        >
+                        <input type="text" class="form-control" id="cname" placeholder="Community Name">
                     </div>
 
                     <div class="form-group ">
-                        <label for="category">Interest or Category </label>
-                        <input
-                            type="text"
-                            class="form-control"
-                            id="category"
-                            name="category"
-                            placeholder="Interest or Category"
-                        >
+                        <label for="name">Interest or Category </label>
+                        <input type="text" class="form-control" id="interestCategory"
+                            placeholder="Interest or Category">
                     </div>
 
+
                     <div class="form-group">
-                        <label for="description">Description </label>
-                        <textarea
-                            class="form-control"
-                            id="description"
-                            name="desccription"
-                            rows="7"
-                            placeholder="Enter your message"
-                        ></textarea>
+                        <label for="message">Description </label>
+                        <textarea class="form-control" id="message" rows="7"
+                            placeholder="Enter your message"></textarea>
                     </div>
 
                     <div class="text-center mt-4">

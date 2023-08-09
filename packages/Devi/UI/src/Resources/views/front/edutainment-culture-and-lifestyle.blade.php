@@ -17,32 +17,30 @@
                     Add yours!
                 </h3>
             </div>
+            <form class="form-custom helper-form ">
 
-            <form
-                class="form-custom helper-form"
-                action="{{ route('ui.front.edutainment-culture-and-lifestyle-store') }}"
-                method="POST"
-            >
-                @csrf
+
                 <div class="row">
                     <div class="form-group ">
                         <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                        <input type="text" class="form-control" id="name" placeholder="Name">
                     </div>
 
                     <div class="form-group ">
                         <label for="start">Start</label>
-                        <input type="date" class="form-control" id="startdate" name="startdate">
+                        <input type="date" class="form-control" id="start">
                     </div>
 
                     <div class="form-group ">
                         <label for="end">End</label>
-                        <input type="date" class="form-control" id="enddate" name="enddate">
+                        <input type="date" class="form-control" id="end">
                     </div>
 
+
+
                     <div class="form-group">
-                        <label for="category">Category </label>
-                        <select class="form-select" id="category" name="category">
+                        <label for="categoryValue">Category </label>
+                        <select class="form-select" id="categoryValue">
                             <option value="option1">Option 1</option>
                             <option value="option2">Option 2</option>
                             <option value="option3">Option 3</option>
@@ -51,14 +49,16 @@
 
                     <div class="form-group ">
                         <label for="location">Location</label>
-                        <input type="text" class="form-control" id="location" name="location" placeholder="Enter Location">
+                        <input type="text" class="form-control" id="name" placeholder="Enter Location">
                     </div>
 
+
                     <div class="form-group">
-                        <label for="description">Description </label>
-                        <textarea class="form-control" id="description" name="description" rows="7"
+                        <label for="message">Description </label>
+                        <textarea class="form-control" id="message" rows="7"
                             placeholder="Enter a description for your plan"></textarea>
                     </div>
+
 
                     <div class="text-center mt-4">
                         <button type="submit" class="btn btn-primary">Submit Now</button>
