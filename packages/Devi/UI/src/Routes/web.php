@@ -5,7 +5,8 @@ use Devi\UI\Http\Controllers\ExportController;
 use Devi\UI\Http\Controllers\FrontController;
 use Devi\UI\Http\Controllers\SearchApiController;
 
-// Route::group(['middleware' => ['web', 'user']], function () {
+//user
+Route::group(['middleware' => ['web']], function () {
 
     /**
      * DataGrid export.
@@ -22,6 +23,16 @@ use Devi\UI\Http\Controllers\SearchApiController;
         Route::get('share-experiences', 'share_experiences')->name('ui.front.share-experiences');
         Route::get('mentoring-portal', 'mentoring_portal')->name('ui.front.mentoring-portal');
         Route::get('edutainment-culture-and-lifestyle', 'edutainment_culture_and_lifestyle')->name('ui.front.edutainment-culture-and-lifestyle');
+    
+        //form store routes
+        // Route::group(['middleware' => ['web']], function () {
+            Route::post('community-store', 'community_store')->name('community-store');
+            Route::post('create-your-plan-store', 'create_your_plan_store')->name('create-your-plan-store');
+            Route::post('edutainment-culture-lifestyle-store', 'edutainment_culture_lifestyle_store')->name('edutainment-culture-lifestyle-store');
+            Route::post('i-need-help-store', 'i_need_help_store')->name('i-need-help-store');
+            Route::post('i-can-help-store', 'i_can_help_store')->name('i-can-help-store');
+            Route::post('share-experiences-store', 'share_experiences_store')->name('share-experiences-store');
+        // });
     });
 
 
@@ -30,4 +41,4 @@ use Devi\UI\Http\Controllers\SearchApiController;
         Route::post('getCategory', 'getCategory')->name('ui.front.category');
         Route::post('searchCategory', 'searchCategory')->name('ui.front.searchcateory');
     });
-// });
+});

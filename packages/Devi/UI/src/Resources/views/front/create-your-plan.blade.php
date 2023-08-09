@@ -17,54 +17,74 @@
                     Create Your Plan
                 </h3>
             </div>
-            <form class="form-custom helper-form ">
-
-
+            <form action="{{ route('create-your-plan-store')}}" method="post" class="form-custom helper-form ">
+                @csrf
                 <div class="row">
                     <div class="form-group">
                         <label for="categoryValue">You are? </label>
-                        <select class="form-select" id="categoryValue">
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
+                        <select name="category_id" class="form-select" id="categoryValue">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
                         </select>
+                        @error('category_id')
+                            <div class="invalid-feedback" style="display:block;">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="form-group ">
                         <label for="title">Title</label>
-                        <input type="text" class="form-control" id="title" placeholder="Title">
+                        <input type="text" name="title" class="form-control" id="title" placeholder="Title">
+                        @error('title')
+                            <div class="invalid-feedback" style="display:block;">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="form-group ">
                         <label for="start">Start</label>
-                        <input type="date" class="form-control" id="start">
+                        <input type="date" name="start_date" class="form-control" id="start">
+                        @error('start_date')
+                            <div class="invalid-feedback" style="display:block;">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="form-group ">
                         <label for="end">End</label>
-                        <input type="date" class="form-control" id="end">
+                        <input type="date" name="end_date" class="form-control" id="end">
+                        @error('end_date')
+                            <div class="invalid-feedback" style="display:block;">{{ $message }}</div>
+                        @enderror
                     </div>
 
 
                     <div class="form-group">
                         <label for="message">Description </label>
-                        <textarea class="form-control" id="message" rows="7"
+                        <textarea class="form-control" name="description" id="message" rows="7"
                             placeholder="Enter a description for your plan"></textarea>
+                            @error('description')
+                                <div class="invalid-feedback" style="display:block;">{{ $message }}</div>
+                            @enderror
                     </div>
 
                     <div class="form-group">
-                        <label for="categoryValue">Priority </label>
-                        <select class="form-select" id="categoryValue">
-                            <option value="option1">Option 1</option>
-                            <option value="option2">Option 2</option>
-                            <option value="option3">Option 3</option>
+                        <label for="categoryValue">Priority</label>
+                        <select name="priority" class="form-select" id="categoryValue">
+                            <option value="1">Option 1</option>
+                            <option value="2">Option 2</option>
+                            <option value="3">Option 3</option>
                         </select>
+                        @error('priority')
+                            <div class="invalid-feedback" style="display:block;">{{ $message }}</div>
+                        @enderror
                     </div>
 
                     <div class="form-group">
                         <label for="obstacles">Obstacles </label>
-                        <textarea class="form-control" id="obstacles" rows="7"
+                        <textarea name="obstacles" class="form-control" id="obstacles" rows="7"
                             placeholder="Enter a Obstacles for your plan"></textarea>
+                            @error('obstacles')
+                                <div class="invalid-feedback" style="display:block;">{{ $message }}</div>
+                            @enderror
                     </div>
 
                     <div class="text-center mt-4">
