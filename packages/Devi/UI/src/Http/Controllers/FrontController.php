@@ -82,7 +82,8 @@ class FrontController extends Controller
             ];
             Community::create($communityData);
 
-            return redirect()->back()->with('success', 'Community created successfully.');
+            //  redirect()->back()->with('success', 'Community created successfully.');
+             return session()->flash('success', trans('admin::app.categorys.create-success'));
         } catch (\Throwable $th) {
             throw $th;
         }
