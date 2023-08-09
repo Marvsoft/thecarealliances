@@ -7,12 +7,12 @@
                 <h3>The Care Alliances</h3>
             </a>
             <div class="user-btns">
-                <a href="">
+                <a href="{{ route('ui.front.login') }}">
                     <button class="btn btn-primary">
                         Login
                     </button>
                 </a>
-                <a href="">
+                <a href="{{ route('ui.front.sign_up') }}">
                     <button class="btn btn-primary">
                         Signup
                     </button>
@@ -28,28 +28,28 @@
                 <li>
                     <a class="nav-link scrollto active" href="{{ route('ui.front.index') }}">Home</a>
                 </li>
-                <li><a class="nav-link scrollto" href="">Directory</a></li>
-                <!-- <li><a class="nav-link scrollto" href="#services">Coop Education</a></li> -->
+                {{-- <li><a class="nav-link scrollto" href="{{ route('ui.front.directory') }}">Directory</a></li> --}}
+                {{-- <li><a class="nav-link scrollto" href="#services">Coop Education</a></li> --}}
                 <li class="dropdown">
-                    <a href="about-us.html"><span>About us</span><i class="bi bi-chevron-down"></i></a>
+                    <a href="{{ route('ui.front.about_us') }}"><span>About us</span><i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="blogs.html">Blogs </a></li>
+                        <li><a href="{{ route('ui.front.blogs') }}">Blogs </a></li>
                     </ul>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="">Services</a>
+                    <a class="nav-link scrollto" href="{{ route('ui.front.services') }}">Services</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="">Programs</a>
+                    <a class="nav-link scrollto" href="{{ route('ui.front.programs') }}">Programs</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="">Partners</a>
+                    <a class="nav-link scrollto" href="{{ route('ui.front.partners') }}">Partners</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="">Care Alliances tv</a>
+                    <a class="nav-link scrollto" href="{{ route('ui.front.programs') }}">Care Alliances tv</a>
                 </li>
                 <li class="dropdown">
-                    <a href="alliances.html"><span>Alliances</span><i class="bi bi-chevron-down"></i></a>
+                    <a href="{{ route('ui.front.alliances') }}"><span>Alliances</span><i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="{{ route('ui.front.create-new-community') }}">Community </a></li>
                         <li><a href="{{ route('ui.front.create-your-plan') }}">Create Your plan</a></li>
@@ -63,19 +63,19 @@
                     </ul>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="">Contact</a>
+                    <a class="nav-link scrollto" href="{{ route('ui.front.contact_us') }}">Contact</a>
                 </li>
                 <li class="dropdown">
-                    <a href="#"><span>Account</span><i class="bi bi-chevron-down"></i></a>
+                    <a href=""><span>Account</span><i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="">User </a></li>
-                        <li><a href="">Password Reset</a></li>
+                        <li><a href="{{ route('ui.front.users')}}">User </a></li>
+                        <li><a href="{{ route('ui.front.password_reset') }}">Password Reset</a></li>
                         <li><a href="">Logout</a></li>
 
                     </ul>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="">Add List</a>
+                    <a class="nav-link scrollto" href="{{ route('ui.front.all_list') }}">Add List</a>
                 </li>
 
             </ul>
