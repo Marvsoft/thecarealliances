@@ -15,12 +15,18 @@ Route::post('/export', [ExportController::class, 'export'])->name('ui.datagrid.e
 Route::controller(FrontController::class)->group(function () {
     Route::get('/', 'index')->name('ui.front.index');
     Route::get('create-your-plan', 'create_plan')->name('ui.front.create-your-plan');
+    Route::post('create-your-plan', 'create_plan_store')->name('ui.front.create-your-plan-store');
     Route::get('create-new-community', 'create_new_community')->name('ui.front.create-new-community');
+    Route::post('create-new-community', 'create_new_community_store')->name('ui.front.create-new-community-store');
     Route::get('i-can-help', 'i_can_help')->name('ui.front.i-can-help');
+    Route::post('i-can-help', 'i_can_help_store')->name('ui.front.i-can-help-store');
     Route::get('who-am-i', 'who_am_i')->name('ui.front.who-am-i');
     Route::get('i-need-help', 'i_need_help')->name('ui.front.i-need-help');
+    Route::post('i-need-help', 'i_need_help_store')->name('ui.front.i-need-help-store');
     Route::get('edutainment-culture-and-lifestyle', 'edutainment_culture_and_lifestyle')->name('ui.front.edutainment-culture-and-lifestyle');
+    Route::post('edutainment-culture-and-lifestyle-store', 'edutainment_culture_and_lifestyle_store')->name('ui.front.edutainment-culture-and-lifestyle-store');
     Route::get('share-experiences', 'share_experiences')->name('ui.front.share-experiences');
+    Route::post('share-experiences', 'share_experiences_store')->name('ui.front.share-experiences-store');
     Route::get('mentoring-portal', 'mentoring_portal')->name('ui.front.mentoring-portal');
     Route::get('about-us', 'about_us')->name('ui.front.about_us');
     Route::get('all-list', 'all_list')->name('ui.front.all_list');
