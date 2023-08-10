@@ -83,6 +83,9 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
 
                     Route::post('/cards', 'Devi\Admin\Http\Controllers\Admin\DashboardController@updateCards')->name('admin.api.dashboard.cards.update');
                 });
+
+                //category import
+                Route::post('category-import', 'Devi\Admin\Http\Controllers\Admin\DashboardController@categoryImport')->name('category.import');
             });
 
             // Groups Routes
@@ -151,6 +154,8 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
 
                     Route::put('mass-destroy', 'UserController@massDestroy')->name('admin.settings.users.mass_delete');
                 });
+
+                
             });
         });
     });

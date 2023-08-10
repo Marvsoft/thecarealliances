@@ -82,8 +82,7 @@ class FrontController extends Controller
             ];
             Community::create($communityData);
 
-            //  redirect()->back()->with('success', 'Community created successfully.');
-             return session()->flash('success', trans('admin::app.categorys.create-success'));
+            return redirect()->back()->with('message', 'Community created successfully.');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -116,7 +115,7 @@ class FrontController extends Controller
             ];
             CreateYourPlan::create($communityData);
 
-            return redirect()->back()->with('success', 'Community created successfully.');
+            return redirect()->back()->with('message', 'Create Your Plan added successfully.');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -146,7 +145,7 @@ class FrontController extends Controller
             ];
             EdutainmentCultureLifestyle::create($communityData);
 
-            return redirect()->back()->with('success', 'Edutainment Culture Lifestyle created successfully.');
+            return redirect()->back()->with('message', 'Edutainment Culture Lifestyle created successfully.');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -176,7 +175,7 @@ class FrontController extends Controller
             ];
             INeedHelp::create($communityData);
 
-            return redirect()->back()->with('success', 'Edutainment Culture Lifestyle created successfully.');
+            return redirect()->back()->with('message', 'I need help created successfully.');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -214,7 +213,7 @@ class FrontController extends Controller
             ];
             ICanHelp::create($communityData);
 
-            return redirect()->back()->with('success', 'Edutainment Culture Lifestyle created successfully.');
+            return redirect()->back()->with('message', 'I can help created successfully.');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -242,7 +241,7 @@ class FrontController extends Controller
             ];
             ShareExperience::create($shareData);
 
-            return redirect()->back()->with('success', 'Share Experience created successfully.');
+            return redirect()->back()->with('message', 'Share Experience created successfully.');
         } catch (\Throwable $th) {
             throw $th;
         }

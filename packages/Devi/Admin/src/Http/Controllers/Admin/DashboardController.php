@@ -5,7 +5,10 @@ namespace Devi\Admin\Http\Controllers\Admin;
 use Carbon\Carbon;
 use Devi\Admin\Http\Controllers\Controller;
 use Devi\Admin\Helpers\Dashboard as DashboardHelper;
-use Devi\Post\Repositories\PostRepository;;
+use Devi\Post\Repositories\PostRepository;
+use Maatwebsite\Excel\Facades\Excel;
+
+use App\Imports\CategoryImport;
 
 class DashboardController extends Controller
 {
@@ -110,5 +113,17 @@ class DashboardController extends Controller
         }
 
         return response()->json($cards);
+    }
+
+    public function categoryImport(){
+        try {
+            Excel::import(new CategoryImport,request()->file('file'));
+
+            session()->flash('success', 'Category Import successfully.');
+        return redirect()->back();
+        } catch (\Throwable $th) {
+            dd($th);
+            return $th;
+        }
     }
 }
