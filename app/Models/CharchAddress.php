@@ -9,5 +9,7 @@ class CharchAddress extends Model
 {
     use HasFactory;
 
+    protected $table = 'charch_address';
+    
     protected $guarded = [];
 }

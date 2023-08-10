@@ -9,5 +9,7 @@ class CharchCategory extends Model
 {
     use HasFactory;
 
+    protected $table = 'charch_category';
+
     protected $guarded = [];
 }
