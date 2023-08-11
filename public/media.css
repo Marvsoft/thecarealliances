@@ -40,7 +40,7 @@
         font-size: 26px;
     }
     .img-card figcaption {
-        min-height: 80px;
+        min-height: 60px;
     }
     .img-card figcaption h4 {
         font-size: 16px;
@@ -230,6 +230,9 @@
         font-size: 13px;
         margin-bottom: 15px;
     }
+    .img-card figcaption  {
+        min-height: 60px;
+    }
 }
 
 
@@ -259,7 +262,7 @@
         font-size: 22px;
     }
     .img-card figcaption  {
-        min-height: 70px;
+        min-height: 60px;
     }
     .img-card figcaption h4 {
      font-size: 14px;

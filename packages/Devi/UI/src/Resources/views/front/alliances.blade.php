@@ -34,7 +34,7 @@
                 <a href="" class="item">Knowledge </a>
                 <a href="" class="item">Management of Companies and Enterprises </a>
             </div>
-            <div class="row g-5">
+            <div class="row gy-5">
                 <div class="col-md-4">
                     <div class="videos">
                         <iframe src="https://www.youtube.com/embed/39ILoDWK-P4" title="YouTube video player"
