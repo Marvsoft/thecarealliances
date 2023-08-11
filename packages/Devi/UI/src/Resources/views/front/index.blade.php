@@ -24,7 +24,7 @@
                 </h3>
             </div>
             <div class="row gy-3">
-                <div class="col-md-3">
+                <div class="col-lg-3  col-md-4 col-12">
                     <a href="{{ route('ui.front.who-am-i') }}">
                         <figure class="img-card">
                             <div class="image"><img src="{{ asset('images/banner.jpg')}}" alt="image" /></div>
@@ -35,7 +35,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3  col-md-4 col-12">
                     <a href="{{ route('ui.front.i-can-help') }}">
                         <figure class="img-card">
                             <div class="image"><img src="{{ asset('images/2.jpg')}}" alt="image" /></div>
@@ -45,7 +45,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3  col-md-4 col-12">
                     <a href="{{ route('ui.front.i-need-help') }}">
                         <figure class="img-card">
                             <div class="image"><img src="{{ asset('images/3.jpg')}}" alt="image" /></div>
@@ -55,7 +55,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3  col-md-4 col-12">
                     <a href="{{ route('ui.front.share-experiences') }}">
                         <figure class="img-card">
                             <div class="image"><img src="{{ asset('images/4.jpg')}}" alt="image" /></div>
@@ -65,7 +65,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3  col-md-4 col-12">
                     <a href="{{ route('ui.front.create-new-community') }}">
                         <figure class="img-card">
                             <div class="image"><img src="{{ asset('images/5.jpg')}}" alt="image" /></div>
@@ -75,7 +75,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3  col-md-4 col-12">
                     <a href="{{ route('ui.front.create-your-plan') }}">
                         <figure class="img-card">
                             <div class="image"><img src="{{ asset('images/6.jpg')}}" alt="image" /></div>
@@ -85,7 +85,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3  col-md-4 col-12">
                     <a href="{{ route('ui.front.edutainment-culture-and-lifestyle') }}">
                         <figure class="img-card">
                             <div class="image"><img src="{{ asset('images/7.jpg')}}" alt="image" /></div>
@@ -95,7 +95,7 @@
                         </figure>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3  col-md-4 col-12">
                     <a href="{{ route('ui.front.mentoring-portal')}}">
                         <figure class="img-card">
                             <div class="image"><img src="{{ asset('images/8.jpg')}}" alt="image" /></div>

@@ -16,7 +16,7 @@
 
     <section class="about">
         <div class="container">
-            <div class="row g-5">
+            <div class="row gy-5">
                 <div class="col-lg-8">
                     <div class="text">
                         <h5 class="mt-4">PROGRAMS </h5>
