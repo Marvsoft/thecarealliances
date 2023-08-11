@@ -7,6 +7,8 @@ use Devi\Admin\Http\Controllers\Controller;
 use Devi\Post\Repositories\WhoamiRepository;
 use Devi\Post\Repositories\WhoamiSubCategoryRepository;
 use Devi\Post\DataGrids\WhoAmISubCategoryDatagrid;
+use App\Models\Whoami;
+use App\Models\WhoamIPage;
 
 
 class WhoAmIController extends Controller
@@ -29,7 +31,8 @@ class WhoAmIController extends Controller
      */
     public function index()
     {
-        return view('admin::who_am_i.mainCategory.index');
+        $whomICategories = WhoamIPage::with('getSubCategory')->get();
+        return view('admin::who_am_i.mainCategory.index',compact('whomICategories'));
     }
 
     /**

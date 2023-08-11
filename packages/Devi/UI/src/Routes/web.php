@@ -25,7 +25,7 @@ Route::group(['middleware' => ['web','user']], function () {
         Route::get('create-your-plan', 'create_plan')->name('ui.front.create-your-plan');
         Route::get('create-new-community', 'create_new_community')->name('ui.front.create-new-community');
         Route::get('i-can-help', 'i_can_help')->name('ui.front.i-can-help');
-        Route::get('who-am-i', 'who_am_i')->name('ui.front.who-am-i');
+        Route::any('who-am-i', 'who_am_i')->name('ui.front.who-am-i');
         Route::get('i-need-help', 'i_need_help')->name('ui.front.i-need-help');
         Route::get('edutainment-culture-and-lifestyle', 'edutainment_culture_and_lifestyle')->name('ui.front.edutainment-culture-and-lifestyle');
         Route::get('share-experiences', 'share_experiences')->name('ui.front.share-experiences');

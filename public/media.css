@@ -1,0 +1,304 @@
+@media only screen and (max-width: 1200px) {
+    .navbar a,
+    .navbar a:focus {
+        font-size: 15px;
+        padding-right: 21px;
+    }
+    .search-bar select,
+    .search-bar button,
+    .search-bar input {
+        padding: 8px 11px;
+        font-size: 14px;
+    }
+    .title h3 {
+        font-size: 30px;
+    }
+}
+@media only screen and (max-width: 992px) {
+    .search-bar {
+        top: 120px;
+        width: 95%;
+    }
+    .search-bar .container {
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 900px) {
+    .search-bar {
+      
+        padding: 10px;
+    }
+    .hero .text {
+        width: 90%;
+        margin-top: 10%;
+    }
+    .hero .text h1 {
+        font-size: 40px;
+    }
+
+    .title h3 {
+        font-size: 26px;
+    }
+    .img-card figcaption {
+        min-height: 80px;
+    }
+    .img-card figcaption h4 {
+        font-size: 16px;
+    }
+    .about {
+        padding-top: 50px;
+    }
+    .forms .form-custom {
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 775px) {
+    .top-header .btn {
+        margin-left: 20px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        padding: 9px 19px;
+        font-size: 12px;
+    }
+
+    .search-bar .container {
+        max-width: 100%;
+    }
+    .search-bar label {
+        font-size: 12px;
+    }
+    .search-bar select,
+    .search-bar button,
+    .search-bar input {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+    .forms .helper-form {
+        width: 80%;
+    }
+    .forms {
+        padding: 30px 0px 90px 0px;
+    }
+    .forms .helper-form h4 {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 655px) {
+    * {
+        /* border: 1px solid; */
+        /* outline: 2px solid red; */
+    }
+    .logo h3 {
+        font-size: 18px;
+    }
+    .title h3 {
+        font-size: 24px;
+    }
+    .btn-primary {
+        font-size: 12px;
+        padding: 10px 27px;
+        border: transparent;
+        background: var(--primary);
+        color: white;
+        letter-spacing: 0.6px;
+        border-radius: 4px;
+    }
+    .search-bar {
+        /* top: 70px; */
+    }
+    .search-bar .search-row {
+        grid-template-columns: 1fr 1fr 1fr ;
+        gap: 10px;
+    }
+    .search-bar .search-item {
+        margin: 0px;
+    }
+    .search-bar .search-item:last-child {
+        grid-column: 1 / -1;
+    }
+    .search-bar .search-item:last-child label {
+        margin: 0px;
+        display: none;
+    }
+    .top-header .btn {
+        margin-left: 0px;
+        margin-right: 10px;
+        padding: 9px 19px;
+        font-size: 10px;
+    }
+    .top-header .btn i {
+        font-size: 15px;
+    }
+    .about h5 {
+        font-size: 19px;
+    }
+    .about h6 {
+        font-size: 15px;
+    }
+    .about p , .about a{
+        text-align:left;
+        font-size: 14px;
+        line-height: 1.6;
+    }
+    .form-control {
+        font-size: 14px;
+    }
+    .forms .helper-form {
+        width: 90%;
+    }
+    .forms .helper-form .form-check label {
+        font-size: 13px;
+    }
+    .forms .form-custom .form-group label {
+        font-size: 14px;
+    }
+    .forms .helper-form .form-group {
+        padding: 6px 10px;
+    }
+
+    .footer-widget {
+        margin-top: 40px;
+    } 
+    .footer-widget-1 {
+        margin-top: 0px;
+        padding-top: 0px;
+    } 
+    .cta-text span {
+        font-size: 14px;
+        display: inline-block;
+        margin-bottom: 25px;
+    }
+    .footer-widget-heading h3 {
+        font-size: 16px;
+    }
+    .footer-widget ul li a {
+        font-size: 13px;
+    }
+    .footer-social-icon span {
+        margin-top: 40px;
+    }
+    .cta-text h4 {
+        font-size: 17px;
+    }
+    .forms .form-custom {
+        padding: 10px;
+    }
+    .top-header .logo img {
+        height: 51px;
+    }
+}
+
+
+@media only screen and (max-width: 550px) {
+
+    .hero .text h1 {
+        font-size: 32px;
+        padding-top: 20px;
+    }
+    .title {
+        padding-top: 0px;
+    }
+    .search-bar {
+        top: 100px;
+    }
+     
+    .search-bar label {
+        font-size: 10px;
+    }
+    .search-bar select, .search-bar button, .search-bar input {
+        padding: 7px 8px;
+        font-size: 11px;
+    }
+    .resource-portal .box h3 {
+        font-weight: 700;
+        font-size: 19px;
+    }
+    .resource-portal .box p {
+        font-size: 15px;
+    }
+    .forms .form-custom .form-group label {
+        margin-bottom: 0px;
+    }
+    .g-5, .gy-5 {
+        --bs-gutter-y: 2rem;
+    }
+    .forms .title p {
+        width: 90%;
+        font-size: 13px;
+        margin-bottom: 15px;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    
+    .top-header .btn {
+        margin-right: 5px;
+        padding: 9px 12px;
+        font-size: 10px;
+    }
+    .top-header .logo {
+        /* display: block; */
+        /* width: 45%; */
+        gap: 10px;
+    }
+    .top-header .logo h3 {
+        margin: 0px;
+        font-size: 16px;
+    }
+    .search-bar {
+        top: 95px;
+    }
+    .hero .text p {
+        font-size: 13px;
+    }
+    .title h3 {
+        font-size: 22px;
+    }
+    .img-card figcaption  {
+        min-height: 70px;
+    }
+    .img-card figcaption h4 {
+     font-size: 14px;
+    }
+    .footer-logo a h3 {
+        font-size: 18px;
+    }
+    .blog-list .blog-item {
+        margin-bottom: 30px;
+    }
+    .blog-list .blog-item .blog-item-title {
+        font-size: 18px;
+    }
+    .blog-list .blog-item .blog-item-content p {
+     font-size: 14px;
+    }
+    .forms {
+        padding-bottom: 60px;
+    }
+    .forms .title {
+        padding-bottom: 10px;
+    }
+    .forms .title h3 {
+        font-size: 19px;
+    }
+    .forms .helper-form {
+        width: 100%;
+        padding-top: 15px;
+    }
+    .forms .helper-form h4 {
+        margin-top: 20px;
+    }
+    .forms .form-custom .form-group label {
+        font-size: 13px;
+    }
+    .forms .form-custom .form-group input[type=checkbox] {
+        margin-right: 4px;
+        height: 13px;
+        width: 13px;
+     }
+
+}

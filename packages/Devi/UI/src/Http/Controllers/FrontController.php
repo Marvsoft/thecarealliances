@@ -10,6 +10,8 @@ use App\Models\EdutainmentCultureLifestyle;
 use App\Models\INeedHelp;
 use App\Models\ICanHelp;
 use App\Models\ShareExperience;
+use App\Models\Whoami;
+use App\Models\WhoamIPage;
 use Validator;
 
 class FrontController extends Controller
@@ -35,9 +37,24 @@ class FrontController extends Controller
         return view('ui::front.i-can-help');
     }
 
-    public function who_am_i()
+    public function who_am_i(Request $request)
     {
-        return view('ui::front.who-am-i');
+        /* if($request->category_id){
+            // return $category =  explode(',',$request->category_id);
+            $subcat = $request->sub_category_id;
+            $whomICategories = WhoamIPage::whereIn('id',$request->category_id)
+                                    ->whereHas('getSubCategory',function($q) use ($subcat){
+                                        $q->whereIn('id',$subcat);
+                                    })->get();
+        }else{ */
+            $whomICategories = WhoamIPage::with('getSubCategory')->get();
+        // }
+
+        // return $request->all();
+        // "category_id":["1","2"],"sub_category_id":["1"]
+        // if($request->category_id) 
+// return $whomICategories;
+        return view('ui::front.who-am-i',compact('whomICategories'));
     }
 
     public function i_need_help()

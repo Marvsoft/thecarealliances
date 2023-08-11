@@ -3,12 +3,13 @@
     <div class="container">
         <div class="d-flex py-3 align-items-center justify-content-between">
             <a href="{{ route('ui.front.index') }}" class="logo">
-                <!-- <img src="assets/img/logo.png" alt="" class="img-fluid" /> -->
+                <img src="{{ asset('logo.png')}}" alt="" class="img-fluid" />
                 <h3>The Care Alliances</h3>
             </a>
             <div class="user-btns">
                 <a href="{{ route('ui.front.login') }}">
                     <button class="btn btn-primary">
+                    <i class='bx bx-user-circle'></i>
                         Login
                     </button>
                 </a>
@@ -17,12 +18,15 @@
                         Signup
                     </button>
                 </a>
+                <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+                <i class="bi bi-list mobile-nav-toggle"></i>
+
             </div>
         </div>
     </div>
 </div>
 <header id="header" class="shadow-sm">
-    <div class="container d-flex align-items-center justify-content-between">
+    <div class="container d-flex align-items-center justify-content-between shadow-sm">
         <nav id="navbar" class="navbar">
             <ul>
                 <li>
@@ -79,7 +83,7 @@
                 </li>
 
             </ul>
-            <i class="bi bi-list mobile-nav-toggle"></i>
+            <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
         </nav>
         <!-- .navbar -->
     </div>
