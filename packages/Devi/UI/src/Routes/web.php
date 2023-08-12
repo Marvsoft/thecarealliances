@@ -6,7 +6,7 @@ use Devi\UI\Http\Controllers\FrontController;
 use Devi\UI\Http\Controllers\SearchApiController;
 
 //user
-Route::group(['middleware' => ['web','user']], function () {
+Route::group(['middleware' => ['web']], function () {
 
 /**
  * DataGrid export.
