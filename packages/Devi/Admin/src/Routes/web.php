@@ -7,7 +7,7 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
     Route::get('/', 'Devi\Admin\Http\Controllers\Controller@redirectToLogin')->name('krayin.home');
     Route::prefix(config('app.admin_path'))->group(function () {
 
-        Route::get('/', 'Devi\Admin\Http\Controllers\Controller@redirectToLogin');
+        Route::get('/', 'Devi\Admin\Http\Controllers\Controller@redirectToLogin')->name('admin.home');
 
         // Login Routes
         Route::get('login', 'Devi\Admin\Http\Controllers\User\SessionController@create')->name('admin.session.create');

@@ -33,7 +33,7 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('about-us', 'about_us')->name('ui.front.about_us');
         Route::get('all-list', 'all_list')->name('ui.front.all_list');
         Route::get('alliances', 'alliances')->name('ui.front.alliances');
-        Route::get('blog-detail', 'blog_detail')->name('ui.front.blog_detail');
+        Route::get('blog-detail/{slug}', 'blog_detail')->name('ui.front.blog_detail');
         Route::get('blogs', 'blogs')->name('ui.front.blogs');
         Route::get('contact-us', 'contact_us')->name('ui.front.contact_us');
         // Route::get('directory', 'directory')->name('ui.front.directory');
@@ -44,6 +44,11 @@ Route::group(['middleware' => ['web']], function () {
         Route::get('programs', 'programs')->name('ui.front.programs');
         Route::get('users', 'users')->name('ui.front.users');
         Route::get('password-reset', 'password_reset')->name('ui.front.password_reset');
+
+        Route::post('registration', 'registration')->name('ui.front.sign-up');
+        Route::post('loginCheck', 'loginCheck')->name('ui.front.loginCheck');
+        Route::get('logout', 'logout')->name('ui.front.logout');
+        Route::post('reset', 'reset')->name('ui.front.reset');
     });
 
     Route::controller(SearchApiController::class)->prefix('user')->group(function () {
