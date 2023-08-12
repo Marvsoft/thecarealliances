@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Devi\Admin\Http\Controllers\Who_Am_I\WhoAmIController;
 
 Route::group(['middleware' => ['web', 'admin_locale']], function () {
     Route::get('/', 'Devi\Admin\Http\Controllers\Controller@redirectToLogin')->name('krayin.home');
@@ -52,6 +53,20 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
             Route::get('', 'Devi\Admin\Http\Controllers\Services\ServiceController@index')->name('admin.services.index');
         });
 
+        Route::controller(WhoAmIController::class)->prefix('who-am-i')->group(function () {
+            Route::get('', 'index')->name('admin.who-am-i.main-category.index');
+            Route::get('create', 'create')->name('admin.who-am-i.main-category.create');
+            Route::get('edit/{id}', 'edit')->name('admin.who-am-i.main-category.edit');
+            Route::post('create', 'store')->name('admin.who-am-i.main-category.store');
+            Route::post('update', 'update')->name('admin.who-am-i.main-category.update');
+            Route::get('sub-category/index', 'subCategory')->name('admin.who-am-i.sub-category.index');
+            Route::get('sub-category/create', 'createSubCategory')->name('admin.who-am-i.sub-category.create');
+            Route::get('sub-category/edit/{id}', 'editSubCategory')->name('admin.who-am-i.sub-category.edit');
+            Route::post('sub-category/store', 'storeSubCategory')->name('admin.who-am-i.sub-category.store');
+            Route::post('sub-category/update', 'updateSubCategory')->name('admin.who-am-i.sub-category.update');
+        });
+
+
         // Admin Routes
         Route::group(['middleware' => ['user']], function () {
             Route::delete('logout', 'Devi\Admin\Http\Controllers\User\SessionController@destroy')->name('admin.session.destroy');
@@ -72,6 +87,9 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
 
                     Route::post('/cards', 'Devi\Admin\Http\Controllers\Admin\DashboardController@updateCards')->name('admin.api.dashboard.cards.update');
                 });
+
+                //category import
+                Route::post('category-import', 'Devi\Admin\Http\Controllers\Admin\DashboardController@categoryImport')->name('category.import');
             });
 
             // Groups Routes
@@ -140,6 +158,8 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
 
                     Route::put('mass-destroy', 'UserController@massDestroy')->name('admin.settings.users.mass_delete');
                 });
+
+                
             });
         });
     });

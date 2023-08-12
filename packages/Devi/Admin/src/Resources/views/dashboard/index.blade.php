@@ -22,6 +22,15 @@
 
         {!! view_render_event('admin.dashboard.index.cards.after') !!}
     </div>
+
+    <div>
+        <form action="{{ route('category.import') }}" method="POST" enctype="multipart/form-data">
+            @csrf
+            <input type="file" name="file" class="form-control">
+            <br>
+            <button class="btn-sm btn btn-success">Import Category</button>
+        </form>
+    </div>
 @stop
 
 @push('scripts')

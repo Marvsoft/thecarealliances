@@ -7,7 +7,7 @@
 @section('content-wrapper')
     <div class="content full-page adjacent-center">
         <div class="page-header">
-            
+
             {{ Breadcrumbs::render('posts.create') }}
 
             <div class="page-title">
@@ -41,7 +41,7 @@
                                 {!! view_render_event('admin.posts.create.form_controls.general.before') !!}
 
                                 @csrf()
-                                
+
                                 <div class="form-group" :class="[errors.has('title') ? 'has-error' : '']">
                                     <label class="required">
                                         {{ __('admin::app.posts.name') }}
@@ -67,7 +67,7 @@
                                     <label class="required">
                                         {{ __('admin::app.posts.slug') }}
                                     </label>
-                                
+
                                     <input
                                         type="text"
                                         name="slug"
@@ -77,12 +77,30 @@
                                         v-validate="'required'"
                                         data-vv-as="{{ __('admin::app.posts.slug') }}"
                                     />
-                                
+
                                     <span class="control-error" v-if="errors.has('slug')">
                                         @{{ errors.first('slug') }}
                                     </span>
                                 </div>
-                                
+
+                                <div class="form-group" :class="[errors.has('image') ? 'has-error' : '']">
+                                    <label>
+                                        {{ __('Image') }}
+                                    </label>
+
+                                    <input
+                                        type="file"
+                                        name="image"
+                                        class="control"
+                                        value="{{ old('image') }}"
+                                        v-validate="'required'"
+                                    />
+
+                                    <span class="control-error" v-if="errors.has('image')">
+                                        @{{ errors.first('image') }}
+                                    </span>
+                                </div>
+
                                 <div class="form-group">
                                     <label class="required">
                                         {{ __('admin::app.posts.status') }}
@@ -100,46 +118,9 @@
                                     </label>
                                 </div>
 
-                                <div class="form-group" :class="[errors.has('parent_id') ? 'has-error' : '']">
-                                    {{ __('admin::app.category.title') }}
-    
-                                    <select
-                                        class="control"
-                                        id="parent_id"
-                                        name="parent_id"
-                                        v-validate="'numeric'"
-                                        data-vv-as="{{ __('admin::app.category.parent_id') }}"
-                                    >
-                                        <option value="0"></option>
-                                        @foreach ($categories as $key => $category)
-                                            <option value="{{ $key }}" {{ old('parent_id') == $category ? 'selected' : '' }}>
-                                                {{ $category }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-    
-                                    <span class="control-error" v-if="errors.has('parent_id')">
-                                        @{{ errors.first('parent_id') }}
-                                    </span>
-                                </div>
-
-                                <div class="form-group " :class="[errors.has('tag[]') ? 'has-error' : '']">
-                                    <label for="tag">{{ __('admin::app.leads.tag') }}</label>
-             
-                                    <tags-component
-                                        control-name="tags[]"
-                                        control-label="{{ __('admin::app.leads.tag') }}"
-                                        :data='@json($tags)'
-                                    ></tags-component>
-                                    
-                                    <span class="control-error" v-if="errors.has('tag[]')">
-                                        @{{ errors.first('tag[]') }}
-                                    </span>
-                                </div>
-
                                 <div class="form-group" :class="[errors.has('content') ? 'has-error' : '']">
-                                    <label for="content" class="required" style="margin-bottom: 10px">{{ __('admin::app.posts.content') }}</label>
-        
+                                    <label for="content" style="margin-bottom: 10px">{{ __('admin::app.posts.content') }}</label>
+
                                     <textarea
                                         name="content"
                                         class="control"
@@ -147,7 +128,7 @@
                                         v-validate="'required'"
                                         data-vv-as="&quot;{{ __('admin::app.posts.content') }}&quot;"
                                     >{{ old('content') }}</textarea>
-        
+
                                     <span class="control-error" v-if="errors.has('content')">
                                         @{{ errors.first('content') }}
                                     </span>
@@ -155,10 +136,10 @@
 
                                 {!! view_render_event('admin.posts.create.form_controls.general.after') !!}
                             </tab>
-    
+
                         </tabs>
                     </div>
-                    
+
                 </div>
             </div>
         </form>
@@ -173,7 +154,7 @@
         $(document).ready(function(){
             tinymce.init({
                 selector: '#content',
-                
+
                 height: 200,
 
                 width: "100%",
@@ -181,7 +162,7 @@
                 plugins: 'image imagetools media wordcount save fullscreen code table lists link hr',
 
                 toolbar1: 'formatselect | bold italic strikethrough forecolor backcolor link hr | alignleft aligncenter alignright alignjustify | numlist bullist outdent indent  | removeformat | code | table',
-                
+
                 image_advtab: true,
             });
         });
@@ -218,7 +199,7 @@
             </ul>
         </div>
     </script>
-        
+
     <script>
         Vue.component('tags-component', {
             template: '#tags-component-template',
@@ -249,7 +230,7 @@
                 },
 
             },
-            
+
             mounted() {
                 this.tags = JSON.parse(JSON.stringify(this.data));
             }
