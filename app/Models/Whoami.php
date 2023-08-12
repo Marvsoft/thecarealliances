@@ -12,4 +12,8 @@ class Whoami extends Model
     protected $table = 'who_am_i_sub_category';
 
     protected $guarded = [];
+
+    public function getCategory(){
+        return $this->hasOne(WhoamIPage::class, 'id', 'who_am_i_page_id');
+    }
 }
