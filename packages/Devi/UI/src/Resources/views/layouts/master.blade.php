@@ -891,11 +891,11 @@ a {
 
     <body style="scroll-behavior: smooth;">
         <div id="app">
-            {{-- @include('ui::layouts.header') --}}
+            @include('ui::layouts.header')
 
             @yield('content-wrapper')
 
-            {{-- @include('ui::layouts.footer') --}}
+            @include('ui::layouts.footer')
         </div>
 
         <!-- Jquery -->

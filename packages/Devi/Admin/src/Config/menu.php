@@ -9,34 +9,16 @@ return [
         'icon-class' => 'dashboard-icon',
     ], [
         'key'        => 'post',
-        'name'       => 'admin::app.layouts.post',
+        'name'       => 'Blogs',
         'route'      => 'admin.posts.index',
         'sort'       => 2,
         'icon-class' => 'settings-icon',
     ],
     [
         'key'        => 'post.posts',
-        'name'       => 'admin::app.layouts.post',
+        'name'       => 'Blog',
         'route'      => 'admin.posts.index',
         'sort'       => 1,
-        'icon-class' => 'posts-icon',
-    ], [
-        'key'        => 'post.category',
-        'name'       => 'admin::app.layouts.category',
-        'route'      => 'admin.category.index',
-        'sort'       => 2,
-        'icon-class' => 'posts-icon',
-    ], [
-        'key'        => 'post.tags',
-        'name'       => 'admin::app.layouts.tags',
-        'route'      => 'admin.tags.index',
-        'sort'       => 2,
-        'icon-class' => 'posts-icon',
-    ], [
-        'key'        => 'post.tags',
-        'name'       => 'admin::app.layouts.tags',
-        'route'      => 'admin.tags.index',
-        'sort'       => 2,
         'icon-class' => 'posts-icon',
     ], [
         'key'        => 'who-am-i',

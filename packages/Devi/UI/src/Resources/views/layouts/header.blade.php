@@ -3,30 +3,31 @@
     <div class="container">
         <div class="d-flex py-3 align-items-center justify-content-between">
             <a href="{{ route('ui.front.index') }}" class="logo">
-                <img src="{{ asset('logo.png')}}" alt="" class="img-fluid" />
+                <!-- <img src="assets/img/logo.png" alt="" class="img-fluid" /> -->
                 <h3>The Care Alliances</h3>
             </a>
-            <div class="user-btns">
-                <a href="{{ route('ui.front.login') }}">
-                    <button class="btn btn-primary">
-                    <i class='bx bx-user-circle'></i>
-                        Login
-                    </button>
-                </a>
-                <a href="{{ route('ui.front.sign_up') }}">
-                    <button class="btn btn-primary">
-                        Signup
-                    </button>
-                </a>
-                <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
-                <i class="bi bi-list mobile-nav-toggle"></i>
 
-            </div>
+            @if(! auth()->guard('user_login')->user())
+                <div class="user-btns">
+                    <a href="{{ route('ui.front.login') }}">
+                        <button class="btn btn-primary">
+                            Login
+                        </button>
+                    </a>
+                    <a href="{{ route('ui.front.sign_up') }}">
+                        <button class="btn btn-primary">
+                            Signup
+                        </button>
+                    </a>
+                </div>
+            @else
+                Welcome, {{ auth()->guard('user_login')->user()->first_name }}  {{ auth()->guard('user_login')->user()->last_name }}!
+            @endif
         </div>
     </div>
 </div>
 <header id="header" class="shadow-sm">
-    <div class="container d-flex align-items-center justify-content-between shadow-sm">
+    <div class="container d-flex align-items-center justify-content-between">
         <nav id="navbar" class="navbar">
             <ul>
                 <li>
@@ -50,7 +51,7 @@
                     <a class="nav-link scrollto" href="{{ route('ui.front.partners') }}">Partners</a>
                 </li>
                 <li>
-                    <a class="nav-link scrollto" href="{{ route('ui.front.programs') }}">Care Alliances tv</a>
+                    <a class="nav-link scrollto" href="{{ route('ui.front.alliances') }}">Care Alliances tv</a>
                 </li>
                 <li class="dropdown">
                     <a href="{{ route('ui.front.alliances') }}"><span>Alliances</span><i class="bi bi-chevron-down"></i></a>
@@ -73,8 +74,9 @@
                     <a href=""><span>Account</span><i class="bi bi-chevron-down"></i></a>
                     <ul>
                         <li><a href="{{ route('ui.front.users')}}">User </a></li>
-                        <li><a href="{{ route('ui.front.password_reset') }}">Password Reset</a></li>
-                        <li><a href="">Logout</a></li>
+                        <li><a href="{{ route('ui.front.password_reset') }}">Password
+                             Reset</a></li>
+                        <li><a href="{{ route('ui.front.logout') }}">Logout</a></li>
 
                     </ul>
                 </li>
@@ -83,7 +85,7 @@
                 </li>
 
             </ul>
-            <!-- <i class="bi bi-list mobile-nav-toggle"></i> -->
+            <i class="bi bi-list mobile-nav-toggle"></i>
         </nav>
         <!-- .navbar -->
     </div>
