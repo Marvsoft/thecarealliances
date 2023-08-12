@@ -3,21 +3,23 @@
 namespace Devi\UI\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
+use Devi\User\Models\UserLogin;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Mail;
 
 class FrontController extends Controller
 {
-    /**
-     * Export datagrid.
-     *
-     * @return \Illuminate\Http\Response
-     */
-
     public function index()
     {
         return view('ui::front.index');
     }
 
+    /*
+    * Create plan
+    */
     public function create_plan()
     {
         return view('ui::front.create-your-plan');
@@ -47,11 +49,17 @@ class FrontController extends Controller
         return view('ui::front.share-experiences');
     }
 
+    /*
+    * Create New Community and store
+    */
     public function create_new_community()
     {
         return view('ui::front.create-new-community');
     }
 
+    /*
+    * Create New Edutainment Culture and Lifestyle
+    */
     public function edutainment_culture_and_lifestyle()
     {
         return view('ui::front.edutainment-culture-and-lifestyle');
@@ -84,12 +92,20 @@ class FrontController extends Controller
 
     public function blogs()
     {
-        return view('ui::front.blogs');
+        $blogs = DB::table('posts')->get();
+
+        return view('ui::front.blogs', compact('blogs'));
     }
 
-    public function blog_detail()
+    public function blog_detail($slug)
     {
-        return view('ui::front.blog-detail');
+        $blog = DB::table('posts')
+            ->leftJoin('post_tags', 'posts.id', '=', 'post_tags.tag_id')
+            ->leftJoin('tags', 'post_tags.tag_id', '=', 'tags.id')
+            ->where('posts.slug', $slug)
+            ->first();
+
+        return view('ui::front.blog-detail', compact('blog'));
     }
 
     public function alliances()
@@ -125,5 +141,98 @@ class FrontController extends Controller
     public function password_reset()
     {
         return view('ui::front.password-reset');
+    }
+
+    /**
+     * Registration
+     */
+    public function registration(Request $request)
+    {
+        $validated = $request->validate([
+            'email' => 'required',
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+
+        $registration = UserLogin::create([
+            'username' => $request->username,
+            'email' => $request->email,
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'password' => Hash::make($request->password)
+        ]);
+
+
+        if ($registration) {
+            Auth::guard('user_login')->login($registration);
+
+            return redirect()->route('ui.front.index')->with('success', 'Registration Successfully!');
+        } else {
+            return redirect()->back()->with('error', 'Something went wrong!');
+        }
+    }
+
+    /**
+     * Login
+     */
+    public function loginCheck(Request $request)
+    {
+        $check_email = UserLogin::where('email', $request->email)->first();
+
+        if (!empty($check_email)) {
+            $check_pass = Hash::check($request->password, $check_email->password);
+
+            if ($check_pass) {
+                // Log the user in
+                Auth::guard('user_login')->login($check_email);
+
+                // Store user data in session
+                session()->put('user', $check_email);
+
+                return view('ui::front.index');
+            } else {
+                return redirect()->back()->with('error', 'Incorrect Password!');
+            }
+        } else {
+            return redirect()->back()->with('error', 'Email Not Registered!');
+        }
+    }
+
+    /**
+     * Logout
+     */
+    public function logout()
+    {
+        Auth::guard('user_login')->logout();
+        session()->forget('user');
+
+        return redirect()->route('ui.front.index')->with('success', 'Logged out successfully!');
+    }
+
+    /**
+     * Reset
+     */
+    public function reset(Request $request)
+    {
+        $validated = request()->validate([
+            'email' => 'required'
+        ]);
+
+        $generatePassword = Str::random(10);
+
+        $user = UserLogin::where('email', request()->input('email'))->first();
+
+        $user->password = Hash::make($generatePassword);
+        // $user->password = $generatePassword;
+
+        $user->save();
+
+        $message = 'You new Password is ' .  $generatePassword;
+
+        Mail::raw($message, function ($message) use ($request) {
+            $message->to($request->email)->subject('Reset Password');
+        });
+
+        return redirect()->route('ui.front.index')->with('success', 'Logged out successfully!');
     }
 }

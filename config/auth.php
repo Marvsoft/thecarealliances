@@ -40,6 +40,10 @@ return [
             'driver' => 'session',
             'provider' => 'users'
         ],
+        'user_login' => [
+            'driver' => 'session',
+            'provider' => 'users_login'
+        ],
     ],
 
     /*
@@ -63,6 +67,12 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => Devi\User\Models\User::class,
+        ],
+
+        'users_login' => [
+            'driver' => 'eloquent',
+            'model' => Devi\User\Models\UserLogin::class,
+            // 'table' => 'user_login',
         ]
     ],
 
@@ -85,6 +95,12 @@ return [
         'users' => [
             'provider' => 'users',
             'table' => 'user_password_resets',
+            'expire' => 60,
+        ],
+
+        'webs' => [
+            'provider' => 'webs',
+            'table' => 'user_login',
             'expire' => 60,
         ],
     ],

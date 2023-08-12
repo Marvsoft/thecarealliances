@@ -4,8 +4,17 @@
 
     <section class="forms bg-grey">
         <div class="container">
-
-            <form class="form-custom helper-form login-forms">
+            {{-- @if ($errors->any())
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif --}}
+            <form action="{{route('ui.front.loginCheck')}}" class="form-custom helper-form login-forms" method="POST">
+                @csrf
                 <div class="text-center">
                     <h4>Login In </h4>
                 </div>
@@ -13,13 +22,13 @@
                 <div class="row">
 
                     <div class="form-group col-md-12">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                        <label for="name">Email</label>
+                        <input type="email" class="form-control" id="name" name="email" placeholder="Enter your name">
                     </div>
 
                     <div class="form-group col-md-12">
                         <label for="Password">Password</label>
-                        <input type="password" class="form-control" id="email" placeholder="Enter your Password">
+                        <input type="password" class="form-control" id="email" name="password" placeholder="Enter your Password">
                     </div>
 
 
