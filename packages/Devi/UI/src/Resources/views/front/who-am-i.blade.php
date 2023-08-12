@@ -21,193 +21,37 @@
                     attributes.
                 </p>
             </div>
-            <form action="" class="form-custom ">
+            <form action="{{ route('ui.front.who-am-i') }}" method="POST" class="form-custom ">
+                @csrf
                 <div class="row g-5">
+                    @foreach($whomICategories as $val)
                     <div class="col-4">
                         <div class="wrapper">
                             <div class="form-group heading">
-                                <input type="checkbox" id="checkbox2">
-                                <label for="checkbox2">Personal Growth and Learning </label>
+                                <input type="checkbox" name="cat_id[]" id="checkbox2" value="{{ $val->id }}">
+                                <label for="checkbox2">{{ $val->header }} </label>
                             </div>
                             <div class="seprate">
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
+                                @foreach($val->getSubCategory as $subcat)
+                                
+                                    <div class="form-group">
+                                        <input type="checkbox" name="sub_cat_id[]" id="checkbox2" value="{{ $subcat->id }}">
+                                        <label for="checkbox2">{{ $subcat->header }}</label>
+                                    </div>
+                                @endforeach
                             </div>
                         </div>
                     </div>
-                    <div class="col-4">
-                        <div class="wrapper">
-                            <div class="form-group heading">
-                                <input type="checkbox" id="checkbox2">
-                                <label for="checkbox2">Career Development </label>
-                            </div>
-                            <div class="seprate">
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="wrapper">
-                            <div class="form-group heading">
-                                <input type="checkbox" id="checkbox2">
-                                <label for="checkbox2">Health and Wellness </label>
-                            </div>
-                            <div class="seprate">
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="wrapper">
-                            <div class="form-group heading">
-                                <input type="checkbox" id="checkbox2">
-                                <label for="checkbox2">Personal Growth and Learning </label>
-                            </div>
-                            <div class="seprate">
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="wrapper">
-                            <div class="form-group heading">
-                                <input type="checkbox" id="checkbox2">
-                                <label for="checkbox2">Career Development </label>
-                            </div>
-                            <div class="seprate">
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="wrapper">
-                            <div class="form-group heading">
-                                <input type="checkbox" id="checkbox2">
-                                <label for="checkbox2">Health and Wellness </label>
-                            </div>
-                            <div class="seprate">
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                                <div class="form-group">
-                                    <input type="checkbox" id="checkbox2">
-                                    <label for="checkbox2">Main Checkbox 2</label>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                   
                     <center>
-                        <button class="btn-primary">Show Result</button>
+                        <button type="submit" class="btn-primary">Show Result</button>
                     </center>
                 </div>
             </form>
+            <div>
+            </div>
+
         </div>
     </section>
 @endsection

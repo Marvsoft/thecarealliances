@@ -36,7 +36,7 @@
         <div class="footer-content pt-5 pb-5">
             <div class="row">
                 <div class="col-xl-4 col-lg-4 mb-50">
-                    <div class="footer-widget">
+                    <div class="footer-widget footer-widget-1">
                         <div class="footer-logo">
 
                             <a href="index.html">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
-                    <div class="footer-widget px-5">
+                    <div class="footer-widget ">
                         <div class="footer-widget-heading">
                             <h3>Useful Links</h3>
                         </div>
