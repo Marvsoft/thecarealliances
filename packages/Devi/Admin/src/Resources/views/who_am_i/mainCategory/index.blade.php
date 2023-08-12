@@ -56,7 +56,7 @@
                         <td>{{ $val->header }}</td>
                         
                         <td><?php echo $val->description; ?></td>
-                        <td><a class="btn btn-primary" href="{{ route('admin.who-am-i.main-category.edit',['id'=>$val->id])}}"></td>
+                        <td><a class="btn btn-primary" href="{{ route('admin.who-am-i.main-category.edit',['id'=>$val->id])}}">Edit </a> </td>
                     </tr>
                 @endforeach
             </tbody>
