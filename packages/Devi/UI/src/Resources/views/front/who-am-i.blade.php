@@ -28,14 +28,14 @@
                     <div class="col-4">
                         <div class="wrapper">
                             <div class="form-group heading">
-                                <input type="checkbox" id="checkbox2" name="category_id[]" value="{{ $val->id }}">
+                                <input type="checkbox" name="cat_id[]" id="checkbox2" value="{{ $val->id }}">
                                 <label for="checkbox2">{{ $val->header }} </label>
                             </div>
                             <div class="seprate">
                                 @foreach($val->getSubCategory as $subcat)
                                 
                                     <div class="form-group">
-                                        <input type="checkbox" id="checkbox2" name="sub_category_id[]" value="{{ $subcat->id }}">
+                                        <input type="checkbox" name="sub_cat_id[]" id="checkbox2" value="{{ $subcat->id }}">
                                         <label for="checkbox2">{{ $subcat->header }}</label>
                                     </div>
                                 @endforeach
@@ -45,10 +45,13 @@
                     @endforeach
                    
                     <center>
-                        <button class="btn-primary">Show Result</button>
+                        <button type="submit" class="btn-primary">Show Result</button>
                     </center>
                 </div>
             </form>
+            <div>
+            </div>
+
         </div>
     </section>
 @endsection
