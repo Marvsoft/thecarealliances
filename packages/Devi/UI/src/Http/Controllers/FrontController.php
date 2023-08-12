@@ -39,21 +39,21 @@ class FrontController extends Controller
 
     public function who_am_i(Request $request)
     {
-        /* if($request->category_id){
-            // return $category =  explode(',',$request->category_id);
-            $subcat = $request->sub_category_id;
-            $whomICategories = WhoamIPage::whereIn('id',$request->category_id)
-                                    ->whereHas('getSubCategory',function($q) use ($subcat){
-                                        $q->whereIn('id',$subcat);
-                                    })->get();
-        }else{ */
-            $whomICategories = WhoamIPage::with('getSubCategory')->get();
-        // }
+        if($request->cat_id || $request->sub_cat_id){
+            $sub_category = $request->sub_cat_id;
+            $whomICategories = WhoamIPage::whereIn('id',$request->cat_id)
+                            ->with('getSubCategory')
+                            ->with('getSubCategory',function($q) use ($sub_category){
+                            // ->whereHas('getSubCategory',function($q) use ($sub_category){
+                                $q->whereIn('id', $sub_category);
+                                // $q->whereIn('who_am_i_page_id', $sub_category);
+                            })
+                            ->get();
 
-        // return $request->all();
-        // "category_id":["1","2"],"sub_category_id":["1"]
-        // if($request->category_id) 
-// return $whomICategories;
+            return view('ui::front.who-am-i-search',compact('whomICategories'));
+        }else{
+            $whomICategories = WhoamIPage::with('getSubCategory')->get();
+        }
         return view('ui::front.who-am-i',compact('whomICategories'));
     }
 
