@@ -11,7 +11,7 @@
     </div>
 
     <div class="navbar-top-right">
-        <div class="profile-info">
+       {{-- <div class="profile-info">
             <div class="dropdown-toggle">
                 <a href="{{ route('ui.front.index') }}" target="_blank">
                     <div class="avatar">
@@ -19,7 +19,7 @@
                     </div>
                 </a>
             </div>
-        </div>
+        </div>--}}
 
         @if (bouncer()->hasPermission('leads.create')
             || bouncer()->hasPermission('quotes.create')
