@@ -38,13 +38,13 @@ return [
         'route'      => 'admin.who-am-i.sub-category.index',
         'sort'       => 2,
         'icon-class' => '',
-    ], [
+    ],/*  [
         'key'        => 'customer',
         'name'       => 'Customer List',
         'route'      => 'admin.customers.index',
         'sort'       => 3,
         'icon-class' => 'avatar-icon',
-    ], [
+    ], *//*  [
         'key'        => 'alliance',
         'name'       => 'Alliance',
         'route'      => 'admin.resources.index',
@@ -74,13 +74,13 @@ return [
         'route'      => 'admin.resources.index',
         // 'info'       => 'admin::app.layouts.user-info',
         'sort'       => 4,
-    ], [
+    ], */ /* [
         'key'        => 'services',
         'name'       => 'Services',
         'route'      => 'admin.services.index',
         'sort'       => 5,
         'icon-class' => 'leads-icon',
-    ], [
+    ],  */[
         'key'        => 'settings',
         'name'       => 'admin::app.layouts.settings',
         'route'      => 'admin.settings.index',
