@@ -11,7 +11,7 @@ class ModuleServiceProvider extends BaseModuleServiceProvider
         \Devi\Post\Models\Category::class,
         \Devi\Post\Models\Tag::class,
         \Devi\Post\Models\PostTag::class,
-        \Devi\Post\Models\Whoami::class,
+        \Devi\Post\Models\WhoAmI::class,
         \Devi\Post\Models\WhoamiSubCategory::class,
     ];
 }
