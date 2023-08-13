@@ -8,7 +8,7 @@ use Devi\Post\Repositories\WhoamiRepository;
 use Devi\Post\Repositories\WhoamiSubCategoryRepository;
 use Devi\Post\DataGrids\WhoAmISubCategoryDatagrid;
 use Illuminate\Http\Request;
-use App\Models\Whoami;
+use App\Models\WhoAmI;
 use App\Models\WhoamIPage;
 
 
@@ -72,7 +72,7 @@ class WhoAmIController extends Controller
         // if (request()->ajax()) {
         //     return app(WhoAmISubCategoryDatagrid::class)->toJson();
         // }
-        $sub_cat =Whoami::with('getCategory')->orderBy('id','DESC')->get();
+        $sub_cat =WhoAmI::with('getCategory')->orderBy('id','DESC')->get();
 
 
         return view('admin::who_am_i.subCategory.index',compact('sub_cat'));
@@ -151,7 +151,7 @@ class WhoAmIController extends Controller
 
     public function editSubCategory($id){
         try {
-            $sub_cat = Whoami::where('id',$id)->first();
+            $sub_cat = WhoAmI::where('id',$id)->first();
             $categories =WhoamIPage::get();
             return view('admin::who_am_i.subCategory.edit', compact('sub_cat','categories'));
         } catch (\Throwable $th) {
@@ -172,7 +172,7 @@ class WhoAmIController extends Controller
                 'description'   => $request->description,
                 'status' => request()->has('status') ? 1 : 0
             ];
-            Whoami::where('id',$request->id)->update($categoryData);
+            WhoAmI::where('id',$request->id)->update($categoryData);
 
             session()->flash('success', 'Sub Category update successfully.');
 

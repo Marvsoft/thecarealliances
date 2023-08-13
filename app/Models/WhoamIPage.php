@@ -14,6 +14,6 @@ class WhoamIPage extends Model
     protected $guarded = [];
 
     public function getSubCategory(){
-        return $this->hasMany(Whoami::class, 'who_am_i_page_id', 'id');
+        return $this->hasMany(WhoAmI::class, 'who_am_i_page_id', 'id');
     }
 }
