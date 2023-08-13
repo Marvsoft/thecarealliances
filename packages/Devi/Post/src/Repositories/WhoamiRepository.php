@@ -26,30 +26,30 @@ class WhoamiRepository extends Repository
      */
     function model()
     {
-        return 'Devi\Post\Contracts\Whoami';
+        return 'Devi\Post\Contracts\WhoAmI';
     }
 
     /**
      * @param array $data
-     * @return \Devi\Post\Contracts\Whoami
+     * @return \Devi\Post\Contracts\WhoAmI
      */
     public function create(array $data)
     {
-        $Whoami = parent::create($data);
+        $WhoAmI = parent::create($data);
 
-        return $Whoami;
+        return $WhoAmI;
     }
 
     /**
      * @param array  $data
      * @param int    $id
      * @param string $attribute
-     * @return \Devi\Post\Contracts\Whoami
+     * @return \Devi\Post\Contracts\WhoAmI
      */
     public function update(array $data, $id, $attribute = "id")
     {
-        $Whoami = parent::update($data, $id);
+        $WhoAmI = parent::update($data, $id);
 
-        return $Whoami;
+        return $WhoAmI;
     }
 }

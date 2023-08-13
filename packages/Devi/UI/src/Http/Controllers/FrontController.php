@@ -15,7 +15,7 @@ use App\Models\EdutainmentCultureLifestyle;
 use App\Models\INeedHelp;
 use App\Models\ICanHelp;
 use App\Models\ShareExperience;
-use App\Models\Whoami;
+use App\Models\WhoAmI;
 use App\Models\WhoamIPage;
 use Validator;
 
