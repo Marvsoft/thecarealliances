@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('charch_categories', function (Blueprint $table) {
+        Schema::create('charch_category', function (Blueprint $table) {
             $table->id();
             $table->unsignedInteger('category_id');
             $table->string('category_name');
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('charch_categories');
+        Schema::dropIfExists('charch_category');
     }
 };
