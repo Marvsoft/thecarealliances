@@ -12,17 +12,25 @@
     <section class="about home-about">
         <div class="container" style="margin-top:100px;">
             <div class="row gy-3">
-                @foreach ($whomICategories as $item)
+                @foreach ($Category as $item)
                     <div class="col-md-3">
                         <a href="#">
                             <figure class="img-card">
                                 <figcaption style="color:black; text-align:center;">
                                     <h4>{{ $item->header }}</h4>
                                     <p><?php echo $item->description; ?></p><br>
-                                    @foreach($item->getSubCategory as $subcat)
-                                        <h6>{{ $subcat->header }}</h6>
-                                        <p><?php echo $subcat->description; ?></p><br>
-                                    @endforeach
+                                </figcaption>
+                            </figure>
+                        </a>
+                    </div>
+                @endforeach
+                @foreach ($subCategory as $item)
+                    <div class="col-md-3">
+                        <a href="#">
+                            <figure class="img-card">
+                                <figcaption style="color:black; text-align:center;">
+                                    <h6>{{ $item->header }}</h6>
+                                    <p><?php echo $item->description; ?></p><br>
                                 </figcaption>
                             </figure>
                         </a>

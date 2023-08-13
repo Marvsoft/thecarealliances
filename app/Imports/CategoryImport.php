@@ -35,7 +35,7 @@ class CategoryImport implements ToModel, WithHeadingRow
                         'state'  => isset($row['state']) ? $row['state'] : '',
                         'zip_code'  => isset($row['zip_code']) ? $row['zip_code'] : '',
                         'phone'  => isset($row['phone']) ? $row['phone'] : '',
-                        'category_id'  => 1 ? 1 : '',
+                        'category_id'  => isset($row['category']) ? $row['category'] : 1,
                     ]);
                     
                     // Sens Mail For User { $row['email'] }
