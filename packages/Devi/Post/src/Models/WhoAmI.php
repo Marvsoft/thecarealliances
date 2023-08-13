@@ -4,11 +4,10 @@ namespace Devi\Post\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-// use Devi\Post\Contracts\WhoAmI as WhoAmIContract;
+use Devi\Post\Contracts\WhoAmI as WhoAmIContract;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-// implements WhoAmIContract
-class WhoAmI extends Model 
+class WhoAmI extends Model implements WhoAmIContract
 {
     use HasFactory;
 
