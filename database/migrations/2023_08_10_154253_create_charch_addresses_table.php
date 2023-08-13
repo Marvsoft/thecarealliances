@@ -11,15 +11,15 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('charch_addresses', function (Blueprint $table) {
+        Schema::create('charch_address', function (Blueprint $table) {
             $table->id();
             $table->integer('category_id');
-            $table->sting('name');
-            $table->sting('address');
-            $table->sting('city');
-            $table->sting('state');
-            $table->sting('zip_code');
-            $table->sting('phone')->nullable();
+            $table->string('name');
+            $table->string('address');
+            $table->string('city');
+            $table->string('state');
+            $table->string('zip_code');
+            $table->string('phone')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('charch_addresses');
+        Schema::dropIfExists('charch_address');
     }
 };
