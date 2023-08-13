@@ -9,6 +9,9 @@ Route::group(['middleware' => ['web', 'admin_locale']], function () {
 
         Route::get('/', 'Devi\Admin\Http\Controllers\Controller@redirectToLogin')->name('admin.home');
 
+        //category import
+        Route::post('category-import', 'Devi\Admin\Http\Controllers\Admin\DashboardController@categoryImport')->name('category.import');
+        
         // Login Routes
         Route::get('login', 'Devi\Admin\Http\Controllers\User\SessionController@create')->name('admin.session.create');
 
