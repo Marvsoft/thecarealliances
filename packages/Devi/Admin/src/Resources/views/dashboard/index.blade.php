@@ -28,7 +28,7 @@
             @csrf
             <input type="file" name="file" class="form-control">
             <br>
-            <button class="btn-sm btn btn-success">Import Category</button>
+            <button class="btn-sm btn btn-success">Import</button>
         </form>
     </div>
 @stop

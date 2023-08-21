@@ -120,7 +120,7 @@ class DashboardController extends Controller
             Excel::import(new CategoryImport,request()->file('file'));
 
             session()->flash('success', 'Category Import successfully.');
-        return redirect()->back();
+        return redirect()->route('admin.dashboard.index');
         } catch (\Throwable $th) {
             dd($th);
             return $th;
